@@ -70,38 +70,44 @@ h1 {
 /* 自定义字体 */
 @font-face {
     font-family: title;
-    src: url('/font/SmileySans-Oblique.woff2');
+    src: url('/font/SmileySans-Oblique.woff2') format('woff2');
     font-display: swap;
+    unicode-range: U+0020-007F, U+00A0-00FF, U+2000-206F, U+4E00-9FFF, U+3000-303F;
 }
 
 @font-face {
     font-family: text;
-    src: url('/font/JiangChengHei-500W.woff2');
+    src: url('/font/JiangChengHei-500W.woff2') format('woff2');
     font-display: swap;
+    unicode-range: U+2010-2B1A, U+2E3A-9FD0, U+F900-FB04, U+FE10-FFEE, U+1F110-1F251;
 }
 
 @font-face {
     font-family: text;
-    src: url('/font/Inter-Regular.woff2');
+    src: url('/font/Inter-Regular.woff2') format('woff2');
     font-display: swap;
+    unicode-range: U+0020-007F, U+00A0-00FF, U+0100-017F, U+0180-024F, U+2000-206F, U+2070-209F;
 }
 
 @font-face {
     font-family: code;
-    src: url('/font/JiangChengHei-500W.woff2');
+    src: url('/font/JiangChengHei-500W.woff2') format('woff2');
     font-display: swap;
+    unicode-range: U+2010-2B1A, U+2E3A-9FD0, U+F900-FB04, U+FE10-FFEE, U+1F110-1F251;
 }
 
 @font-face {
     font-family: code;
-    src: url('/font/CascadiaMono-Regular.woff2');
+    src: url('/font/CascadiaMono-Regular.woff2') format('woff2');
     font-display: swap;
+    unicode-range: U+0020-007F, U+00A0-00FF, U+0100-017F, U+0180-024F, U+2000-206F, U+2070-209F;
 }
 
 @font-face {
     font-family: copyright;
-    src: url('/font/JetBrainsMono-Medium.ttf');
+    src: url('/font/JetBrainsMono-Medium.woff2') format('woff2');
     font-display: swap;
+    unicode-range: U+0020-007F, U+00A0-00FF, U+0100-017F, U+0180-024F, U+2000-206F, U+2070-209F;
 }
 
 /* 调整网页字体 */
@@ -291,52 +297,57 @@ input {
 
 /* 自定义字体样式的字体名 */
 @font-face {
-    font-family: SmileySans;
-    src: url('/font/SmileySans-Oblique.woff2');
-    font-display: swap;
-}
-
-@font-face {
     font-family: JiangChengHei;
-    src: url('/font/JiangChengHei-500W.woff2');
+    src: url('/font/JiangChengHei-500W.woff2') format('woff2');
     font-display: swap;
+    unicode-range: U+2010-2B1A, U+2E3A-9FD0, U+F900-FB04, U+FE10-FFEE, U+1F110-1F251;
 }
 
 @font-face {
     font-family: Inter;
-    src: url('/font/Inter-Regular.woff2');
+    src: url('/font/Inter-Regular.woff2') format('woff2');
     font-display: swap;
+    unicode-range: U+0020-007F, U+00A0-00FF, U+0100-017F, U+0180-024F, U+2000-206F, U+2070-209F;
 }
 
 @font-face {
     font-family: Geist;
-    src: url('/font/Geist-Regular.ttf');
+    src: url('/font/Geist-Regular.woff2') format('woff2');
+    font-display: swap;
+    unicode-range: U+0020-007F, U+00A0-00FF, U+0100-017F, U+0180-024F, U+2000-206F, U+2070-209F;
 }
 
 @font-face {
     font-family: CascadiaMono;
-    src: url('/font/CascadiaMono-Regular.woff2');
+    src: url('/font/CascadiaMono-Regular.woff2') format('woff2');
     font-display: swap;
+    unicode-range: U+0020-007F, U+00A0-00FF, U+0100-017F, U+0180-024F, U+2000-206F, U+2070-209F;
 }
 
 @font-face {
     font-family: CascadiaCode;
-    src: url('/font/CascadiaCode-Regular.woff2');
+    src: url('/font/CascadiaCode-Regular.woff2') format('woff2');
+    font-display: swap;
+    unicode-range: U+0020-007F, U+00A0-00FF, U+0100-017F, U+0180-024F, U+2000-206F, U+2070-209F;
 }
 
 @font-face {
     font-family: GeistMono;
-    src: url('/font/GeistMono-Regular.ttf');
+    src: url('/font/GeistMono-Regular.woff2') format('woff2');
+    font-display: swap;
+    unicode-range: U+0020-007F, U+00A0-00FF, U+0100-017F, U+0180-024F, U+2000-206F, U+2070-209F;
 }
 
 @font-face {
     font-family: JetBrainsMono;
-    src: url('/font/JetBrainsMono-Medium.ttf');
+    src: url('/font/JetBrainsMono-Medium.woff2') format('woff2');
     font-display: swap;
+    unicode-range: U+0020-007F, U+00A0-00FF, U+0100-017F, U+0180-024F, U+2000-206F, U+2070-209F;
 }
 
 @font-face {
     font-family: MapleMono;
-    src: url('/font/MapleMono-Regular.woff2');
+    src: url('/font/MapleMono-Regular.woff2') format('woff2');
     font-display: swap;
+    unicode-range: U+0020-007F, U+00A0-00FF, U+0100-017F, U+0180-024F, U+2000-206F, U+2070-209F;
 }

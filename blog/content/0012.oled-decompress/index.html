@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0.91' OLED 显示被压缩解决方案 - Courage Luo 的网站</title>
+    <!-- 并行下载大字体 -->
+    <link rel="preload" href="/font/SmileySans-Oblique.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/font/JiangChengHei-500W.woff2" as="font" type="font/woff2" crossorigin>
     <!-- 链接favicon -->
     <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
     <link rel="icon" type="image/png" href="/img/favicon.png">
@@ -58,9 +61,9 @@
                 <h3 id="problem">问题陈述</h3>
                 <hr>
                 <p>使用 STC15F104W 单片机驱动了一块 I<sup>2</sup>C 的 0.91 寸 OLED，但在显示时发现文本像是被纵向压缩了一样。</p>
-                <img src="./problem.jpg" style="width: 100%; max-width: 500px; margin: 0 auto; display: block;" loading="lazy" alt="显示被压缩的照片">
+                <img src="./problem.webp" style="width: 100%; max-width: 500px; margin: 0 auto; display: block;" loading="lazy" alt="显示被压缩的照片">
                 <p>而且这种现象并非偶然，在<a href="https://blog.csdn.net/feinifi/article/details/132134777">这篇文章</a>中也出现了一样的情况。作者所说的“6*8尺寸显示特别小”其实并非真正的小，而是被“压缩”成了6*4的尺寸，故难以看清。</p>
-                <img src="./problem.png" style="width: 100%; max-width: 650px; margin: 0 auto; display: block;" loading="lazy" alt="同样的问题在其他文章的描述">
+                <img src="./passage.webp" style="width: 100%; max-width: 650px; margin: 0 auto; display: block;" loading="lazy" alt="同样的问题在其他文章的描述">
                 <p>观察发现实际只显示了偶数行的内容，所以在不考虑修改源码的前提下有两种解决方案：</p>
                 <ol>
                     <li>将原来的 16 行数据一行一行地分别插入在一行 <code class="language-cpp">0x00</code> 之后，变成 32 行数据。</li>
@@ -751,7 +754,7 @@
                     </code>
                 </pre>
                 <p>只需要把这些程序放到<del>礦ision</del>（划掉）μVision中编译为hex文件，再使用STC-ISP刷入单片机即可，效果如下：</p>
-                <img src="./oled.png" style="width: 100%; max-width: 350px; margin: 0 auto; display: block;" loading="lazy" alt="正常情况的显示效果">
+                <img src="./oled.webp" style="width: 100%; max-width: 350px; margin: 0 auto; display: block;" loading="lazy" alt="正常情况的显示效果">
                 <p>接下来讲讲如何使用字模转化程序。</p>
                 <p>首先在字模提取软件中设置好取模格式，然后生成字模，我们即可获得类似如下格式的文本：</p>
                 <pre>
@@ -764,7 +767,7 @@
                     </code>
                 </pre>
                 <p>此时只需要将带有大括号的一整行复制下来粘贴进程序作为其输入，然后按下回车键即可。</p>
-                <img src="./program.png" style="width: 100%; max-width: 800px; margin: 0 auto; display: block;" loading="lazy" alt="程序演示界面">
+                <img src="./program.webp" style="width: 100%; max-width: 800px; margin: 0 auto; display: block;" loading="lazy" alt="程序演示界面">
                 <p>将程序的输出复制下来，放到<code class="language-">oled.h</code>的<code class="language-c">HzK[][32]</code>中，然后在<code class="language-">main.c</code>中使用以下格式调用即可：</p>
                 <pre class="line-numbers">
                     <code class="language-c">
@@ -855,6 +858,7 @@
 
     <!-- 内部JS文件 -->
     <script src="/href/script.js" defer></script>
+    <script src="/blog/title/title.js" defer></script>
     <script src="/blog/quote-js/prismjs/prism.js"></script>
 </body>
 

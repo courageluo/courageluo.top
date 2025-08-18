@@ -1,0 +1,40 @@
+/* 让标题居中 */
+.title {
+    position: relative;
+    height: auto;
+    line-height: 0;
+}
+
+.title-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+    max-height: 300px;
+    object-fit: cover;
+    border-bottom: 1.5px solid #84bec52e;
+}
+
+.title .rounded-box1 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 15px 25px;
+    text-align: center;
+    background-color: #c2c9d215;
+    border: 1.5px solid #84bec52e;
+    z-index: 2;
+}
+
+#article-info {
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-feature-settings: 'tnum';
+    white-space: nowrap;
+}
+
+.content {
+    margin-top: 0;
+}

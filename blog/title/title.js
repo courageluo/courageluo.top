@@ -17,7 +17,11 @@
 
     var img = document.createElement('img');
     img.className = 'title-image';
-    img.src = '/blog/title/title.svg';
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        img.src = '/blog/title/title-night.svg';
+    } else {
+        img.src = '/blog/title/title-day.svg';
+    }
     img.alt = '标题图片';
     banner.appendChild(img);
 

@@ -12,7 +12,7 @@
     min-height: 250px;
     max-height: 300px;
     object-fit: cover;
-    border-bottom: 1.5px solid #84bec52e;
+    border-bottom: 1.5px solid #686d893f;
 }
 
 .title .rounded-box1 {
@@ -23,16 +23,43 @@
     margin: 0;
     padding: 15px 25px;
     text-align: center;
-    background-color: #c2c9d215;
-    border: 1.5px solid #84bec52e;
+    background-color: #d1d7de05;
+    border: 1.5px solid #e0e0e82f;
     z-index: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+    .title-image {
+        border-bottom: 1.5px solid #84bec52e;
+    }
+
+    .title .rounded-box1 {
+        background-color: #c2c9d215;
+        border: 1.5px solid #84bec52e;
+    }
 }
 
 #article-info {
     margin-top: 30px;
     margin-bottom: 0;
+    font-size: 14px;
     font-feature-settings: 'tnum';
     white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .title-image {
+        min-height: 150px;
+        max-height: 250px;
+    }
+
+    .title .rounded-box1 {
+        padding: 10px 15px;
+    }
+
+    #article-info {
+        font-size: 14px;
+    }
 }
 
 .content {

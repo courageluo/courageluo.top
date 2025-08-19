@@ -27,12 +27,22 @@
 
     var box = document.querySelector('main .rounded-box1');
     var titleText = document.querySelector('h1').innerText;
-    box.innerHTML = `
-        <h1 style="text-align: center;">${titleText}</h1>
-        <p id="article-info">
-            <span id="modified-date"></span>&nbsp;&nbsp;
-            <span id="word-count"></span>
-        </p>`;
+
+    const titleContainer = document.createElement('div');
+    titleContainer.className = 'title-content';
+
+    const h1 = document.createElement('h1');
+    h1.style.textAlign = 'center';
+    h1.textContent = titleText;
+
+    const info = document.createElement('p');
+    info.id = 'article-info';
+    info.innerHTML = `<span id="modified-date"></span>&nbsp;&nbsp;<span id="word-count"></span>`;
+
+    titleContainer.appendChild(h1);
+    titleContainer.appendChild(info);
+    box.innerHTML = '';
+    box.appendChild(titleContainer);
 
     if (box) {
         banner.appendChild(box);

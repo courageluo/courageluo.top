@@ -2,7 +2,7 @@
 .title {
     position: relative;
     height: auto;
-    line-height: 0;
+    /* line-height: 0; */
 }
 
 .title-image {
@@ -28,6 +28,11 @@
     z-index: 2;
 }
 
+.title .rounded-box1 h1 {
+    margin: 0;
+    line-height: 1.4;
+}
+
 @media (prefers-color-scheme: dark) {
     .title-image {
         border-bottom: 1.5px solid #84bec52e;
@@ -40,7 +45,7 @@
 }
 
 #article-info {
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 0;
     font-size: 14px;
     font-feature-settings: 'tnum';

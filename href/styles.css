@@ -304,6 +304,13 @@ input {
 }
 
 @font-face {
+    font-family: JiangChengHei21;
+    src: url('/font/JiangChengHei-500W-21.woff2') format('woff2');
+    font-display: swap;
+    unicode-range: U+2010-2B1A, U+2E3A-9FD0, U+F900-FB04, U+FE10-FFEE, U+1F110-1F251;
+}
+
+@font-face {
     font-family: Inter;
     src: url('/font/Inter-Regular.woff2') format('woff2');
     font-display: swap;
@@ -348,6 +355,13 @@ input {
 @font-face {
     font-family: MapleMono;
     src: url('/font/MapleMono-Regular.woff2') format('woff2');
+    font-display: swap;
+    unicode-range: U+0020-007F, U+00A0-00FF, U+0100-017F, U+0180-024F, U+2000-206F, U+2070-209F;
+}
+
+@font-face {
+    font-family: IntelOneMono;
+    src: url('/font/IntelOneMono-Regular.woff2') format('woff2');
     font-display: swap;
     unicode-range: U+0020-007F, U+00A0-00FF, U+0100-017F, U+0180-024F, U+2000-206F, U+2070-209F;
 }

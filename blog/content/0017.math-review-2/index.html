@@ -574,13 +574,13 @@
                     </li>
                     <li>
                         焦点三角形<br>
-                        设 $P(x_0,y_0)$ 是椭圆 $C: \dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$ 上一点，称 $\triangle PF_1F_2$ 为焦点三角形，设 $\angle F_1PF_2=\theta$，$\angle PF_1F_2=\alpha$，$\angle PF_2F_1=\beta$<br>
+                        设 $P(x_0,y_0)$ 是椭圆 $C: \dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$ 上一点，称 $\triangle PF_1F_2$ 为焦点三角形，设 $\angle F_1PF_2=\gamma$，$\angle PF_1F_2=\alpha$，$\angle PF_2F_1=\beta$<br>
                         <ul class="margin-ul">
                             <li>
-                                面积 $S=b^2\tan\dfrac\theta2=b^2\dfrac{\sin\theta}{1+\cos\theta}$
+                                面积 $S=b^2\tan\dfrac\gamma2=b^2\dfrac{\sin\gamma}{1+\cos\gamma}$
                             </li>
                             <li>
-                                离心率 $e=\dfrac{\sin\theta}{\sin\alpha+\sin\beta}$
+                                离心率 $e=\dfrac{\sin\gamma}{\sin\alpha+\sin\beta}$
                             </li>
                         </ul>
                         <div class="formula-rectangle">
@@ -1402,7 +1402,7 @@
                                 \end{aligned}
                             $
                         </div> <br>
-                        特别地，$(e^x)' = e^x$，$(\ln x)' = \dfrac{1}{x}$
+                        特别地，$(\mathrm e^x)' = \mathrm e^x$，$(\ln x)' = \dfrac{1}{x}$
                     </li>
                     <li>
                         求导法则<br>
@@ -1463,7 +1463,7 @@
                         <div class="formula-rectangle">
                             $
                                 \begin{aligned}
-                                    & e^x \ge x + 1 \\
+                                    & \mathrm e^x \ge x + 1 \\
                                     & x - 1 \ge \ln x
                                 \end{aligned}
                             $
@@ -1477,6 +1477,18 @@
                         洛必达（L'Hôpital）法则<br>
                         若 $\displaystyle\lim_{x \to a} f(x) = \displaystyle\lim_{x \to a} g(x) = 0$ 或 $\pm \infty$，且 $g'(x) \neq 0$，则<br>
                         $\displaystyle\lim_{x \to a} \frac{f(x)}{g(x)} = \displaystyle\lim_{x \to a} \frac{f'(x)}{g'(x)}$
+                    </li>
+                    <li>
+                        泰勒（Taylor）公式<br>
+                        若给定在点 $x_0$ 处具有所有前 $n$ 阶导数的函数 $f(x)$，则称多项式<br>
+                        $P_n(x_0;x) = \displaystyle \sum _{i=0} ^n \dfrac{f ^{(i)}(x_0)}{i!} (x - x_0)^i$ <br>
+                        为 $f(x)$ 在点 $x_0$ 处的 $n$ 阶泰勒多项式<br>
+                        据此可推导一些常用不等式，例如：<br>
+                        <ul class="margin-ul">
+                            <li>$\mathrm e^x \ge x + 1$，$x \ge \ln(x + 1)$（即切线不等式）</li>
+                            <li>$\sin x \le x$（$x \ge 0$）</li>
+                            <li>$1 - \dfrac{x^2} 2 \le \cos x \le 1 - \dfrac{x^2} 4$</li>
+                        </ul>
                     </li>
                     <li>
                         对数、指数与 $x$ 乘除的函数图像<br>

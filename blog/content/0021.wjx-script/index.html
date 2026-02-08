@@ -1,0 +1,171 @@
+<!-- wjx脚本 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>问卷星脚本 - Courage Luo 的网站</title>
+    <!-- 并行下载大字体 -->
+    <link rel="preload" href="/font/SmileySans-Oblique.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/font/JiangChengHei-500W.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- 链接favicon -->
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <!-- 将外部CSS文件链接到HTML文档 -->
+    <link rel="stylesheet" type="text/css" href="/href/styles.css">
+    <link rel="stylesheet" type="text/css" href="/href/response.css">
+    <link rel="stylesheet" type="text/css" href="/blog/quote-js/prismjs/prism.css">
+    <!-- 内部CSS文件 -->
+    <style>
+        a {
+            color: #110c50;
+        }
+
+        .update {
+            font-feature-settings: "tnum";
+        }
+
+        /* 背景图片设置 */
+        .background-layer {
+            background-size: 100%;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            a {
+                color: #50d2d2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <!-- 边栏 -->
+        <aside class="sidebar">
+            <div class="rounded-box3">
+                <h3 style="text-align: center;">索引</h3>
+                <hr>
+                <ul>
+                    <li><a href="#intro">介绍</a></li>
+                    <li><a href="#theory">原理</a></li>
+                    <li><a href="#demo">脚本示例</a></li>
+                    <li><a href="#update-log">更新日志</a></li>
+                    <li><a href="#announcement">声明</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- 内容 -->
+        <main class="content-container">
+            <!-- 标题框 -->
+            <div class="rounded-box1">
+                <h1 style="text-align: center;">问卷星脚本</h1>
+            </div>
+
+            <!-- 内容框 -->
+            <div class="rounded-box3">
+                <p id="intro">适用于完成问卷星的单选题问卷答案。</p>
+            </div>
+
+            <div class="rounded-box3">
+                <p id="theory">其基本原理为，打开问卷时，网站向服务器获取题目并下载至 <code class="language-javascript">xxx.aspx</code> 文件，所以只需要获取页面对应元素并依次打印出来即可，其核心代码如下：</p>
+                <pre class="line-numbers">
+                    <code class="language-javascript">
+                        // i = 题目序号 - 1
+                        const n = document.querySelectorAll('[ans]');
+                        console.log('Clicked: ' + n[i].children[1].innerText + '\n');
+                        n[i].children[0].click();
+                    </code>
+                </pre>
+                <p>运行上述代码即可实现基本功能。</p>
+            </div>
+
+            <div class="rounded-box3">
+                <p id="demo">以下是一个完整的示例脚本，可以<a href="./script.js">点击此处</a>下载：</p>
+                <pre class="line-numbers">
+                    <code class="language-javascript">
+                        const n = document.querySelectorAll('[ans]');
+                        const m = document.getElementById('lxNextBtn');
+
+                        function randomDelay(min, max) {
+                            const delay = Math.floor(Math.random() * (max - min)) + min;
+                            console.log('Delayed for: ' + delay + 'ms');
+                            return new Promise(resolve => setTimeout(resolve, delay));
+                        }
+
+                        async function handleWrongAnswers(i) {
+                            n[i].parentElement.querySelector('div:not([ans])').click();
+                            console.log('Question ' + (i + 1) + ': Clicked wrong answer\n');
+                        }
+
+                        async function handleAnswers(i) {
+                            n[i].children[0].click();
+                            console.log('Question ' + (i + 1) + ': Clicked ' + n[i].children[1].innerText + ' (correct)\n');
+                        }
+
+                        async function clickNext() {
+                            await randomDelay(500, 1000);
+                            m.click();
+                            console.log('Clicked SUBMIT');
+                            await randomDelay(500, 1000);
+                            m.click();
+                            console.log('Clicked NEXT');
+                        }
+
+                        async function main(i, isWrong) {
+                            await randomDelay(500, 5000);
+                            if (isWrong) {
+                                await handleWrongAnswers(i);
+                            } else {
+                                await handleAnswers(i);
+                            }
+                            await clickNext();
+                        }
+
+                        async function runAll(wrongCount) {
+                            document.getElementById('txtPassword').value = '自行修改';
+                            await randomDelay(500, 1000);
+                            document.getElementById('btnContinue').click();
+                            await randomDelay(500, 1000);
+                            document.querySelector('.lxstartBtn').click();
+
+                            const wrongIndices = new Set();
+                            while (wrongIndices.size < wrongCount) {
+                                wrongIndices.add(Math.floor(Math.random() * 50));
+                            }
+                            for (let i = 0; i < 50; i++) {
+                                const isWrong = wrongIndices.has(i);
+                                await main(i, isWrong);
+                            }
+                            console.log('-- All done! --');
+                        }
+
+                        runAll(3);
+                    </code>
+                </pre>
+                <p>其中，<code class="language-javascript">runAll(3)</code> 表示随机选择 3 道题目点击错误答案，可以自行修改。修改 <code class="language-javascript">document.getElementById('txtPassword').value = '自行修改';</code> 中的密码即可实现全自动。亦可注释第 40 至 43 行，在第一题答题界面运行即可。</p>
+            </div>
+            
+            <div class="rounded-box3">
+                <h3 id="update-log" style="text-align: center;">更新日志</h3>
+                <hr>
+                <p class="update">2026.02.08&emsp;创建脚本。</p>
+            </div>
+            <div class="rounded-box3">
+                <h3 id="announcement" style="text-align: center;">声明</h3>
+                <hr>
+                <p>本脚本仅供学习交流使用，本人不为用户因使用这些资源对自己和他人造成的任何形式的损失或伤害负责，且本人保留对此插件修改和删除的权利。</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- 页脚 -->
+    <div id="footer"></div>
+
+    <!-- 内部JS文件 -->
+    <script src="/href/script.js" defer></script>
+    <script src="/blog/quote-js/prismjs/prism.js"></script>
+</body>
+
+</html>

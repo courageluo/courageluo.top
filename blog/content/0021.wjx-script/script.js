@@ -37,12 +37,6 @@ async function main(i, isWrong) {
 }
 
 async function runAll(wrongCount) {
-    document.getElementById('txtPassword').value = '自行修改';
-    await randomDelay(500, 1000);
-    document.getElementById('btnContinue').click();
-    await randomDelay(500, 1000);
-    document.querySelector('.lxstartBtn').click();
-
     const wrongIndices = new Set();
     while (wrongIndices.size < wrongCount) {
         wrongIndices.add(Math.floor(Math.random() * 50));

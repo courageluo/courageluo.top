@@ -6,14 +6,7 @@
             "level": 1,
             "notes": 93
         },
-        "hd": {
-            "level": "N/A",
-            "notes": "N/A"
-        },
-        "in": {
-            "level": "N/A",
-            "notes": "N/A"
-        },
+        "_explanation": "Modified by Courage Luo for the viewing experience",
         "version": "3.1.0",
         "artist": {
             "format": "<<<1>>> & <<<2>>>",
@@ -32,14 +25,7 @@
             "level": 2,
             "notes": 42
         },
-        "hd": {
-            "level": "N/A",
-            "notes": "N/A"
-        },
-        "in": {
-            "level": "N/A",
-            "notes": "N/A"
-        },
+        "_explanation":"Modified by Courage Luo for the viewing experience",
         "version": "2.5.0",
         "artist": {
             "format": "<<<1>>> & <<<2>>>",
@@ -58,14 +44,7 @@
             "level": 2,
             "notes": 180
         },
-        "hd": {
-            "level": "N/A",
-            "notes": "N/A"
-        },
-        "in": {
-            "level": "N/A",
-            "notes": "N/A"
-        },
+        "_explanation":"Modified by Courage Luo for the viewing experience",
         "version": "2.0.0",
         "artist": {
             "format": "<<<1>>> & <<<2>>>",
@@ -83,14 +62,7 @@
             "level": 2,
             "notes": 288
         },
-        "hd": {
-            "level": "N/A",
-            "notes": "N/A"
-        },
-        "in": {
-            "level": "N/A",
-            "notes": "N/A"
-        },
+        "_explanation": "Modified by Courage Luo for the viewing experience",
         "version": "1.0.0",
         "artist": "姜米條",
         "charter": "Catcats",
@@ -104,14 +76,7 @@
             "level": 2,
             "notes": 331
         },
-        "hd": {
-            "level": "N/A",
-            "notes": "N/A"
-        },
-        "in": {
-            "level": "N/A",
-            "notes": "N/A"
-        },
+        "_explanation": "Modified by Courage Luo for the viewing experience",
         "version": "1.0.0",
         "artist": "姜米條",
         "charter": "Catcats",
@@ -256,7 +221,6 @@
         "duration": "2:02",
         "charter": "Su1fuR",
         "illustration": "DoublePian",
-        "original": true,
         "version": "1.0.0"
     },
     "Engine x Start!! (melody mix)": {
@@ -345,7 +309,7 @@
             "charter": "Salt"
         },
         "in": {
-            "level": 13.3,
+            "level": 13.4,
             "notes": 733,
             "charter": "百九十八"
         },
@@ -1184,7 +1148,7 @@
             "charter": "XMT小咩兔"
         },
         "in": {
-            "level": 13.9,
+            "level": 13.8,
             "notes": 776
         },
         "artist": "Hundotte",
@@ -1553,7 +1517,7 @@
             }
         },
         "hd": {
-            "level": 8.8,
+            "level": 8.4,
             "notes": 397,
             "charter": {
                 "format": "<<<1|Jαckψ>>>",
@@ -1765,7 +1729,6 @@
         "duration": "2:16",
         "charter": "StupiGGy",
         "illustration": "打雷打人 (青鸟 modified)",
-        "source": "Muse Dash",
         "version": "1.6.8"
     },
     "Final Step!": {
@@ -1792,7 +1755,6 @@
         "duration": "2:17",
         "charter": "Barbarianerman",
         "illustration": "谷地 (青鸟 modified)",
-        "source": "Muse Dash",
         "version": "1.6.8"
     },
     "Cthugha": {
@@ -1824,7 +1786,6 @@
         "duration": "2:35",
         "charter": "Barbarianerman",
         "illustration": "谷地 (青鸟 modified)",
-        "source": "Muse Dash",
         "version": "1.6.8"
     },
     "Initialize": {
@@ -1852,7 +1813,6 @@
         },
         "illustration": "あおお/A-ZERO, morph",
         "duration": "2:07",
-        "source": "WAVEAT",
         "version": "1.6.7"
     },
     "桜樹街道": {
@@ -1876,7 +1836,6 @@
         "charter": "Barbarianerman",
         "illustration": "あおお/A-ZERO, morph",
         "duration": "2:25",
-        "source": "WAVEAT",
         "version": "1.6.7"
     },
     "Get Ready!!": {
@@ -1893,14 +1852,13 @@
             "notes": 584
         },
         "in": {
-            "level": 13.8,
+            "level": 13.7,
             "notes": 819
         },
         "artist": "iF",
         "charter": "StupiGGy",
         "illustration": "あおお/A-ZERO, morph",
         "duration": "2:10",
-        "source": "WAVEAT",
         "version": "1.6.7"
     },
     "Volcanic": {
@@ -1939,7 +1897,6 @@
             "1": "Barbarianerman"
         },
         "illustration": "あおお/A-ZERO, morph",
-        "source": "WAVEAT",
         "version": "1.6.7"
     },
     "GOODTEK": {
@@ -1954,7 +1911,7 @@
             "notes": 609
         },
         "in": {
-            "level": 14.3,
+            "level": 14.2,
             "notes": 873
         },
         "artist": "EBIMAYO",
@@ -1984,7 +1941,7 @@
             }
         },
         "in": {
-            "level": 14.5,
+            "level": 14.4,
             "notes": 898
         },
         "artist": "EBIMAYO",
@@ -2647,7 +2604,7 @@
             "notes": 704
         },
         "in": {
-            "level": 15.4,
+            "level": 15.3,
             "notes": 1186,
             "charter": {
                 "format": "撕裂者 『<<<1|Alloces>>> vs. <<<2|Shin>>>』",
@@ -3075,7 +3032,7 @@
             "notes": 475
         },
         "in": {
-            "level": 13.1,
+            "level": 13.2,
             "notes": 613
         },
         "artist": {
@@ -3184,7 +3141,6 @@
         "version": "1.4.1"
     },
     "Speed Up!": {
-        "original": true,
         "pack": "single",
         "image": "Speed Up! new jacket.png",
         "cost": 16,
@@ -3342,7 +3298,7 @@
             "notes": 320
         },
         "in": {
-            "level": 14.2,
+            "level": 14.1,
             "notes": 724,
             "charter": {
                 "format": "<<<1>>> fixed by <<<2>>>",
@@ -3499,7 +3455,7 @@
             "charter": "Barbarianerman"
         },
         "hd": {
-            "level": 9.9,
+            "level": 9.7,
             "notes": 626,
             "charter": "Snorkel"
         },
@@ -3641,7 +3597,7 @@
             "notes": 549
         },
         "in": {
-            "level": 14.6,
+            "level": 14.5,
             "notes": 840,
             "charter": {
                 "format": "<<<1>>> vs. <<<2>>>",
@@ -3948,7 +3904,7 @@
             "charter": "阿爽"
         },
         "hd": {
-            "level": 10.4,
+            "level": 9.6,
             "notes": 329,
             "charter": "NerSAN"
         },
@@ -4172,7 +4128,6 @@
             "3": "Barbarianerman"
         },
         "illustration": "ZG",
-        "source": "KALPA",
         "version": "2.1.0"
     },
     "HAZARD": {
@@ -4195,7 +4150,6 @@
         "duration": "2:07",
         "charter": "NerSAN",
         "illustration": "ZG",
-        "source": "KALPA",
         "version": "2.1.0"
     },
     "Another Me (D AAN)": {
@@ -4228,7 +4182,6 @@
             "2": "Ctymax"
         },
         "illustration": "ZG",
-        "source": "KALPA",
         "version": "2.1.0"
     },
     "Dont Never Around": {
@@ -4251,7 +4204,6 @@
         "duration": "1:59",
         "charter": "XMT小咩兔",
         "illustration": "Arahosi",
-        "source": "KALPA",
         "version": "2.1.0"
     },
     "RESSiSTANCE": {
@@ -4284,7 +4236,6 @@
             "1": "TangScend"
         },
         "illustration": "LINUS",
-        "source": "KALPA",
         "version": "2.1.0"
     },
     "Concvssion": {
@@ -4464,7 +4415,7 @@
             "charter": "XMT小咩兔"
         },
         "in": {
-            "level": 14.2,
+            "level": 14.3,
             "notes": 866
         },
         "artist": {
@@ -4604,7 +4555,7 @@
             "notes": 285
         },
         "hd": {
-            "level": 9.7,
+            "level": 9.8,
             "notes": 596
         },
         "in": {
@@ -4669,7 +4620,7 @@
             "notes": 806
         },
         "in": {
-            "level": 14.4,
+            "level": 14.3,
             "notes": 827,
             "charter": {
                 "format": "<<<1>>> & <<<2>>>",
@@ -4761,9 +4712,10 @@
             "level": 12.3,
             "notes": 666,
             "charter": {
-                "format": "<<<1|while(TangScend>=TangScend);>>>",
+                "format": "while(TangScend>=TangScend);",
                 "1": "TangScend"
-            }
+            },
+            "_explanation": "Modified by Courage Luo 'cause it can't be parsed by JS"
         },
         "in": {
             "level": 14.8,
@@ -4875,7 +4827,6 @@
             "2": "百九十八"
         },
         "illustration": "Lanota ⓒ Noxy Game Inc.",
-        "source": "Lanota",
         "version": "2.3.0"
     },
     "Protoflicker": {
@@ -4903,7 +4854,6 @@
         "duration": "2:48",
         "charter": "Gausbon",
         "illustration": "Lanota ⓒ Noxy Game Inc.",
-        "source": "Lanota",
         "version": "2.3.0"
     },
     "Horizon Blue": {
@@ -4942,10 +4892,9 @@
             "2": "Pcat"
         },
         "illustration": "Lanota ⓒ Noxy Game Inc.",
-        "source": "Lanota",
         "version": "2.3.0"
     },
-    "You are the Miserable": {
+    "You Are The Miserable": {
         "title": "You are the Miserable",
         "image": "You Are The Miserable jacket.png",
         "pack": "lanota",
@@ -4982,7 +4931,6 @@
         "duration": "2:44",
         "charter": "M3d1uM",
         "illustration": "Lanota ⓒ Noxy Game Inc.",
-        "source": "Lanota",
         "version": "2.3.0"
     },
     "Stasis": {
@@ -5018,7 +4966,6 @@
             "1": "亚树见希子"
         },
         "illustration": "Lanota ⓒ Noxy Game Inc.",
-        "source": "Lanota",
         "version": "2.3.0"
     },
     "いざ、参ります": {
@@ -5194,7 +5141,7 @@
             "charter": "Rikko"
         },
         "in": {
-            "level": 14.5,
+            "level": 14.6,
             "notes": 613
         },
         "artist": "Cosmograph",
@@ -5282,7 +5229,7 @@
             "notes": 176
         },
         "in": {
-            "level": 13.4,
+            "level": 13.3,
             "notes": 706,
             "charter": {
                 "format": "<<<1>>> sipping <<<2|XMTea>>>",
@@ -5318,7 +5265,7 @@
             }
         },
         "in": {
-            "level": 15.2,
+            "level": 15.1,
             "notes": 1102
         },
         "artist": "茶鸣拾贰律",
@@ -5458,7 +5405,7 @@
             }
         },
         "in": {
-            "level": 14.6,
+            "level": 14.5,
             "notes": 972
         },
         "artist": {
@@ -6029,7 +5976,6 @@
             "2": "Barbarianerman",
             "3": "百九十八"
         },
-        "original": "true", 
         "illustration": "Vios.NoFurry.git",
         "version": "2.5.1"
     },
@@ -6260,8 +6206,6 @@
             "1": "Rikko"
         },
         "illustration": "汉堡",
-        "original": true,
-        "source": "OverRapid",
         "version": "3.1.0"
     },
     "Rainy Heart": {
@@ -6326,7 +6270,7 @@
             "notes": 1290
         },
         "in": {
-            "level": 15.9,
+            "level": 15.8,
             "notes": "1243",
             "charter": {
                 "format": "<<<1|さるふるふるさ>>>",
@@ -6451,7 +6395,7 @@
             "notes": 491
         },
         "hd": {
-            "level": 11.4,
+            "level": 11.1,
             "notes": 968
         },
         "in": {
@@ -6694,7 +6638,7 @@
             }
         },
         "in": {
-            "level": 14.7,
+            "level": 14.6,
             "notes": 901
         },
         "artist": "Yooh",
@@ -6955,7 +6899,7 @@
             }
         },
         "in": {
-            "level": 14.3,
+            "level": 14.2,
             "notes": 908
         },
         "artist": "みーに",
@@ -6965,7 +6909,7 @@
             "1": "Clutter"
         },
         "illustration": "伊恩 (青鸟 Modified)",
-        "source": "[https://rotaeno.fandom.com/wiki/ストレイソウル・アラウンド Rotaeno]",
+        "source": "Rotaeno",
         "version": "3.4.2"
     },
     "Manifold Hypothesis": {
@@ -6980,7 +6924,7 @@
             "notes": 401
         },
         "in": {
-            "level": 14.6,
+            "level": 14.7,
             "notes": 895,
             "charter": {
                 "format": "<<<1>>> feat. <<<2>>>&<<<3|野从>>>",
@@ -6997,7 +6941,7 @@
         "duration": "2:31",
         "charter": "Likey",
         "illustration": "阿清 (青鸟 Modified)",
-        "source": "[https://rotaeno.fandom.com/wiki/Manifold_Hypothesis Rotaeno]",
+        "source": "Rotaeno",
         "version": "3.4.2"
     },
     "K.Moe (VIP)": {
@@ -7026,7 +6970,7 @@
             "1": "Rikko"
         },
         "illustration": "BTKCyber (青鸟 Modified)",
-        "source": "[https://rotaeno.fandom.com/wiki/K.Moe_(VIP) Rotaeno]",
+        "source": "Rotaeno",
         "version": "3.4.2"
     },
     "G.V.N. (Glitter, Vomitus and Neon)": {
@@ -7037,7 +6981,7 @@
             "notes": 635
         },
         "hd": {
-            "level": 9.7,
+            "level": 9.5,
             "notes": 900
         },
         "in": {
@@ -7082,7 +7026,7 @@
             }
         },
         "in": {
-            "level": 15.1,
+            "level": 15.2,
             "notes": 977
         },
         "artist": "shadow_bling",
@@ -7140,11 +7084,6 @@
                 "format": "<<<1>>> -FAISEURS DE PANIQUE-",
                 "1": "Su1fuR"
             }
-        },
-        "at": {
-            "level": 16.4,
-            "notes": 1111,
-            "charter": "StR-1"
         },
         "artist": "DJ SHION.Y",
         "duration": "2:08",
@@ -7328,7 +7267,7 @@
         "illustration": "SOMON",
         "version": "3.5.2"
     },
-    "Retribution ~ Cycle of Redemption ~#Hidden": {
+    "Retribution ~ Cycle of Redemption ~": {
         "pack": "story8",
         "notes": 2500,
         "gateway": {
@@ -7340,14 +7279,13 @@
             "1": "Ardolf",
             "2": "Daily"
         },
-        "duration": "2:55",
+        "duration": "2:53",
         "charter": {
             "format": "<<<1|SPΔDE ~what awaits ahead is destruction and destruction~>>>",
             "1": "NerSAN"
         },
         "illustration": "死と花の大祭司(ʌᴉoƨმᴉϝ);;",
         "version": "3.5.2",
-        "original": "true",
         "removed": true
     },
     "Xenolith": {
@@ -7362,7 +7300,7 @@
             "notes": 533
         },
         "in": {
-            "level": 14.2,
+            "level": 14.3,
             "notes": 789,
             "charter": {
                 "format": "<<<1|Xlutter>>> guided by three Oaths",
@@ -7493,7 +7431,7 @@
         "artist": "Blacklolita",
         "duration": "2:21",
         "illustration": "釜飯轟々丸 + jht (Design: 祈莲)",
-        "source": "[https://Arcaea.fandom.com/wiki/Antithese Arcaea]",
+        "source": "Arcaea",
         "version": "3.6.1"
     },
     "PRAGMATISM -RESURRECTION-": {
@@ -7535,7 +7473,7 @@
             "1": "百九十八"
         },
         "illustration": "シエラ (Design: 祈莲)",
-        "source": "[https://Arcaea.fandom.com/wiki/PRAGMATISM Arcaea]",
+        "source": "Arcaea",
         "version": "3.6.1"
     },
     "Shine After": {
@@ -7550,7 +7488,7 @@
             "notes": 647
         },
         "in": {
-            "level": 14.6,
+            "level": 14.4,
             "notes": 800,
             "charter": {
                 "format": "<<<1>>> & <<<2>>>",
@@ -7655,7 +7593,7 @@
             }
         },
         "in": {
-            "level": 15.5,
+            "level": 15.6,
             "notes": 1200
         },
         "artist": {
@@ -7681,7 +7619,7 @@
             "notes": 376
         },
         "hd": {
-            "level": 11.1,
+            "level": 11.3,
             "notes": 566
         },
         "in": {
@@ -7873,7 +7811,7 @@
         "version": "3.8.0"
     },
     "君往何处 (Quo Vadis)": {
-        "unlock": "None",
+       "unlock": "None",
         "pack": "rhythmmaster",
         "title_latin": "Jūn wǎng héchù (Quo Vadis)",
         "ez": {
@@ -7885,7 +7823,7 @@
             "notes": 390
         },
         "in": {
-            "level": 14.1,
+            "level": 14.2,
             "notes": 935,
             "charter": "Salt"
         },
@@ -7916,7 +7854,7 @@
             }
         },
         "in": {
-            "level": 15.3,
+            "level": 15.4,
             "notes": 1262,
             "charter": {
                 "format": "<<<1>>> -The Startline-",
@@ -7963,7 +7901,7 @@
         "version": "3.9.0"
     },
     "月詠に鳴る": {
-        "unlock": "None",
+      "unlock": "None",
         "image": "月詠に鳴る jacket.webp",
         "pack": "chunithm",
         "title_latin": "Tsukuyomi ni naru",
@@ -8012,7 +7950,7 @@
             "notes": 616
         },
         "in": {
-            "level": 14.3,
+            "level": 14.6,
             "notes": 811,
             "charter": {
                 "format": "Luminous<<<1>>>",
@@ -8190,17 +8128,6 @@
                 "1": "Rikko"
             }
         },
-        "at": {
-            "level": 16.9,
-            "notes": 1306,
-            "charter": {
-                "format": "Concat(Ramification,<<<1|Richter>>>)",
-                "1": "Rikko",
-                "2": "Simon_Axis",
-                "3": "騎士Knight",
-                "4": "StR-1"
-            }
-        },
         "artist": "Ωμεγα",
         "duration": "2:25",
         "charter": {
@@ -8260,7 +8187,7 @@
         }
         },
         "in": {
-            "level": 14.5,
+            "level": 14.6,
             "notes": 951,
             "charter": {
             "format": "<<<1|StrayCat>>>",
@@ -8288,7 +8215,7 @@
             "level": 10.2,
             "notes": 408,
             "charter":{
-                "format": "<<<1|Passport:Constructor>>>",
+                "format": "Passport:Constructor",
                 "1": "RipHall",
                 "2": "Likey"
             }
@@ -8354,7 +8281,7 @@
             "notes": 639
         },
         "in": {
-            "level": 15.2,
+            "level": 15.1,
             "notes": 1080,
             "charter": "M3d1uM"
         },
@@ -8390,7 +8317,7 @@
             }
         },
         "in": {
-            "level": 15.1,
+            "level": 15.2,
             "notes": 1257,
             "charter": {
                 "format": "<<<1|\"-1\">>>",
@@ -8439,7 +8366,7 @@
             "notes": 193
         },
         "hd": {
-            "level": 10.9,
+            "level": 10.8,
             "notes": 491,
             "charter": {
                 "format": "OPENING/Level <<<1|R>>>",
@@ -8574,7 +8501,7 @@
             "notes": 657
         },
         "in": {
-            "level": 13.7,
+            "level": 13.9,
             "notes": 793,
             "charter": "Salt"
         },
@@ -8628,9 +8555,9 @@
             "notes": 388
         },
         "in": {
-            "level": 13.2,
+            "level": 13.1,
             "notes": 696,
-            "charter": {
+            "charter":  {
                 "format": "人外侵略地球计划",
                 "1": "Helabot",
                 "2": "Simon_Axis",
@@ -8650,7 +8577,7 @@
         },
         "illustration": "诡异童话",
         "version": "3.10.4"
-    },
+   },
     "蝎虎天体 -Lacertid-": {
         "pack": "single",
         "cost": 16.00,
@@ -8659,7 +8586,7 @@
             "notes": 273
         },
         "hd": {
-            "level": 10.8,
+            "level": 10.7,
             "notes": 596
         },
         "in": {
@@ -8683,7 +8610,7 @@
     },
     "インマイマインド": {
         "pack": "single",
-        "cost": 16.00,
+        "cost": 4.00,
         "ez": {
             "level": 1.5,
             "notes": 89
@@ -8709,9 +8636,9 @@
     "ニライカナイ (NiraicA nai Mix)": {
         "title": "ニライカナイ (NiraicA_nai Mix)",
         "pack": "single",
-        "cost": 16.00,
+        "cost": 4.00,
         "ez": {
-            "level": 3,
+            "level": 2.5,
             "notes": 207,
             "charter": "Barbarianerman"
         },
@@ -8737,7 +8664,7 @@
     },
     "贝多芬祝福 (Beethoven Blessing)": {
         "pack": "single",
-        "cost": 16.00,
+        "cost": 4.00,
         "ez": {
             "level": 5,
             "notes": 103,
@@ -8768,7 +8695,7 @@
     },
     "宇宙残骸少女 (Cosmic Dusty Girl)": {
         "pack": "single",
-        "cost": 16.00,
+        "cost": 4.00,
         "ez": {
             "level": 6,
             "notes": 70,
@@ -8801,7 +8728,7 @@
     },
     "Swing Skip Drop": {
         "pack": "single",
-        "cost": 16.00,
+        "cost": 4.00,
         "ez": {
             "level": 4.5,
             "notes": 219
@@ -8850,11 +8777,11 @@
             "notes": 128
         },
         "hd": {
-            "level": 8.4,
+            "level": 8.8,
             "notes": 339
         },
         "in": {
-            "level": 14.4,
+            "level": 14.5,
             "notes": 993,
             "charter": {
                 "format": "<<<1>>> vs. <<<2>>>",
@@ -8877,7 +8804,7 @@
             "notes": 275
         },
         "hd": {
-            "level": 10.7,
+            "level": 10.9,
             "notes": 461
         },
         "in": {
@@ -8944,7 +8871,7 @@
             "charter": "Su1fuR"
         },
         "hd": {
-            "level": 12.4,
+            "level": 12.3,
             "notes": 1046,
             "charter": {
                 "format": "<<<1|騎士 vs. Knight>>>",
@@ -8952,7 +8879,7 @@
             }
         },
         "in": {
-            "level": 16.3,
+            "level": 16.2,
             "notes": 1600,
             "charter":{
                 "format": "<<<1|Executor-X>>>",
@@ -8965,10 +8892,10 @@
         },
         "artist": { 
             "format": "Acute Disarray",
-            "1": "AiSS",
-            "2": "takehirotei",
-            "3": "rN",
-            "4": "Riya"
+           "1": "AiSS",
+           "2": "takehirotei",
+           "3": "rN",
+           "4": "Riya"
         },
         "duration": "3:10",
         "charter": {
@@ -8977,12 +8904,10 @@
         },
         "illustration": "Kyuare & Wsx",
         "source": "Expert Global Taiko Showdown (EGTS)",
-        "original": true,
         "version": "3.12.0"
     },
     "Aphrodite's Child (short ver.)": {
-        "image": "Aphrodite's Child (short ver.) new jacket.png",
-        "unlock": "None",
+       "unlock": "None",
         "pack": "immaculeesekai",
         "ez": {
             "level": 3.5,
@@ -9003,14 +8928,14 @@
         "artist": "RUQOA",
         "duration": "2:47",
         "charter": "StupiGGy",
-        "illustration": "cala for Immaculée Sekai",
+        "illustration": "Sin:cK for Immaculée Sekai",
         "source": "Immaculée Sekai",
         "version": "3.13.0"
     },
     "DevIAtiOn (short ver.)": {
         "pack": "immaculeesekai",
         "ez": {
-            "level": 4.5,
+            "level": 5,
             "notes": 222
         },
         "hd": {
@@ -9018,7 +8943,7 @@
             "notes": 827
         },
         "in": {
-            "level": 15.7,
+            "level": 15.6,
             "notes": 1117,
             "charter": {
                 "format": "<<<1|Nr3_Official>>>",
@@ -9057,17 +8982,17 @@
     },
     "Alice in a xxxxxxxx": {
         "pack": "single",
-        "cost": 16.00,
+        "cost": 4.00,
         "ez": {
             "level": 5.0,
             "notes": 239
         },
         "hd": {
-            "level": 9.5,
+            "level": 9.7,
             "notes": 433
         },
         "in": {
-            "level": 15.8,
+            "level": 15.7,
             "notes": 922,
             "charter": {
                 "format": "<<<1|◻MT>>> in a XXXXXXXX ",
@@ -9088,7 +9013,7 @@
             "charter": "Su1fuR"
         },
         "hd": {
-            "level": 11.9,
+            "level": 11.5,
             "notes": 639,
             "charter": {
                 "format": "<<<1>>> EXPERT Lv.40",
@@ -9101,7 +9026,7 @@
             "charter": "XMT小咩兔"
         },
         "at": {
-            "level": 15.6,
+            "level": 15.5,
             "notes": 926
         },
         "artist": "Nhato",
@@ -9192,7 +9117,6 @@
     },
     "Frozen Heart": {
         "pack": "single",
-        "cost": 16.00,
         "ez": {
             "level": 5.0,
             "notes": 353
@@ -9202,7 +9126,7 @@
             "notes": 708
         },
         "in": {
-            "level": 14.6,
+            "level": 14.4,
             "notes": 939,
             "charter": {
                 "format": "<<<1>>> & <<<2>>>",
@@ -9221,18 +9145,17 @@
         },
         "illustration": "山山奇",
         "source": "[https://rizline.fandom.com/wiki/Frozen_Heart Rizline]",
-        "duration": "3:14",
-        "version": "3.14.1"
+        "duration": "3:12",
+        "version": "4.14.1"
     },
     "Helios": {
         "pack": "single",
-        "cost": 16.00,
         "ez": {
-            "level": 5.5,
+            "level": 4.5,
             "notes": 188
         },
         "hd": {
-            "level": 9,
+            "level": 9.2,
             "notes": 391,
             "charter": {
                 "format": "<<<1|jeitie>>> touches grass",
@@ -9258,813 +9181,6 @@
         },
         "illustration": "Spectro",
         "duration": "2:15",
-        "version": "3.14.2"
-    },
-    "Flutter Echo": {
-        "pack": "kalpa",
-        "unlock": "Get an A rank or higher on [[RESSiSTANCE]]",
-        "ez": {
-            "level": 3.5,
-            "notes": 222,
-            "charter": "Rikko"
-        },
-        "hd": {
-            "level": 9.8,
-            "notes": 555,
-        "charter": {
-                "format": "<<<1|&#124;R&#124;I&#124;K&#124;K&#124;O&#124;>>> NORMAL",
-                "1": "Rikko"
-            }
-        },
-        "in": {
-            "level": 14.9,
-            "notes": 1046
-        },
-        "artist": "Cansol",
-        "charter": {
-            "format": "<<<1>>> Echo",
-            "1": "Clutter"
-        },
-        "illustration": "Taurell",
-        "source": "KALPA",
-        "duration": "2:44",
-        "version": "3.15.0"
-    },
-    "Re：birth": {
-        "pack": "kalpa",
-        "unlock": "Get an A rank or higher on [[Flutter Echo]]",
-        "ez": {
-            "level": 6.0,
-            "notes": 321,
-            "charter": {
-                "format": "<<<1>>> & <<<2|小咩兔>>> & <<<3>>>",
-                "1": "啊哒咔哟",
-                "2": "XMT小咩兔",
-                "3": "COC"
-            }
-        },
-        "hd": {
-            "level": 12.3,
-            "notes": 733,
-            "charter": {
-                "format": "<<<1>>> & <<<2|小咩兔>>> & <<<3>>>",
-                "1": "啊哒咔哟",
-                "2": "XMT小咩兔",
-                "3": "COC"
-            }
-        },
-        "in": {
-            "level": 15.4,
-            "notes": 939
-        },
-        "artist": "ああああ",
-        "charter": {
-            "format": "<<<1>>> & <<<2>>>",
-            "1": "Gausbon",
-            "2": "StupiGGy"
-        },
-        "illustration": "QueseraGames Co., Ltd.",
-        "source": "KALPA",
-        "duration": "2:39",
-        "version": "3.15.0"
-    },
-    "Avataar ~Reincarnation of Kalpa~": {
-        "pack": "kalpa",
-        "unlock": "EZ - IN: Get an A rank or higher on [[Re：birth]]<br>AT: Get an S rank or higher on Avataar ~Reincarnation of Kalpa~ [IN]",
-        "ez": {
-            "level": 2.0,
-            "notes": 122,
-            "charter": "Su1fuR"
-        },
-        "hd": {
-            "level": 8.2,
-            "notes": 887,
-            "charter": "Su1fuR"
-        },
-        "in": {
-            "level": 13.4,
-            "notes": 979,
-            "charter": "Salt"
-        },
-        "at": {
-            "level": 16.6,
-            "notes": 1074
-        },
-        "artist": {
-            "format": "<<<1|Scarlette>>> a.k.a CrYmson ",
-            "1": "Scarlette"
-        },
-        "charter": {
-            "format": "<<<1|XMT>>> & <<<2>>>",
-            "1": "XMT小咩兔",
-            "2": "Salt"
-        },
-        "illustration": "QueseraGames Co., Ltd.",
-        "source": "KALPA",
-        "duration": "2:56",
-        "version": "3.15.0"
-    },
-    "雪降り ~雪が降っている~": {
-        "pack": "single",
-        "cost": 16.00,
-        "ez": {
-            "level": 1.5,
-            "notes": 111
-        },
-        "hd": {
-            "level": 7.5,
-            "notes": 364
-        },
-        "in": {
-            "level": 12,
-            "notes": 429,
-            "charter": {
-                "format": "<<<1|XMT>>> after <<<2|Barbar>>><<<3>>>",
-                "1": "XMT小咩兔",
-                "2": "Barbarianerman",
-                "3": "NerSAN"
-            }
-        },
-        "at": {
-            "level": 14,
-            "notes": 531,
-             "charter": {
-                "format": "<<<1|小咩兔的多指课堂 vs. 上班睡大觉>>>",
-                "1": "XMT小咩兔"
-            }
-        },
-        "artist": {
-            "format": "<<<1>>> w/ <<<2>>> ft. <<<3>>>",
-            "1": "AiSS",
-            "2": "夜輪",
-            "3": "結月ゆかり"
-        },
-        "duration": "2:30",
-        "charter": "Su1fuR",
-        "illustration": "Vios.NoFurry.git",
-        "original": "true",
-        "version": "3.15.1"
-    },
-    "Retribution ~ Cycle of Redemption ~": {
-        "pack": "single",
-        "cost": 16.00,
-        "ez": {
-            "level": 6.0,
-            "notes": 393
-        },
-        "hd": {
-            "level": 11.3,
-            "notes": 789
-        },
-        "in": {
-            "level": 16.2,
-            "notes": 1502,
-            "charter": {
-                "format": "<<<1>>> vs. <<<2>>> [Respect <<<3|Ner>>> as \"SPΔDE\"]",
-                "1": "Simon_Axis",
-                "2": "Likey",
-                "3": "NerSAN"
-            }
-        },
-        "artist": {
-            "format": "<<<1>>> vs. <<<2|Daily天利>>>",
-            "1": "Ardolf",
-            "2": "Daily"
-        },
-        "duration": "2:55",
-        "charter": {
-            "format": "<<<1>>> & <<<2>>>",
-            "1": "StR-1",
-            "2": "右果_Ary"
-        },
-        "illustration": "死と花の大祭司(ʌᴉoƨმᴉϝ);;",
-        "original": "true",
-        "version": "3.15.1"
-    },
-    "アンビバレンス": {
-        "title_latin": "Ambivalence",
-        "pack": "maimai",
-        "unlock": "none",
-        "ez": {
-            "level": 3.5,
-            "notes": 299,
-            "charter": "XMT小咩兔"
-        },
-        "hd": {
-            "level": 8.7,
-            "notes": 579,
-            "charter": "XMT小咩兔"
-        },
-        "in": {
-            "level": 14.1,
-            "notes": 1128
-        },
-        "artist": {
-                "format": "<<<1>>>×<<<2>>>",
-                "1": "すりぃ",
-                "2": "相沢"
-            },
-        "charter": {
-            "format": "弧光 With Opposition",
-            "1": "Rikko",
-            "2": "Ctymax",
-            "3": "阿爽"
-        },
-        "illustration": "SEGA (祈莲 modified)",
-        "source": "maimai",
-        "duration": "2:43",
-        "version": "3.16.0"
-    },
-    "Komplexe": {
-        "pack": "maimai",
-        "unlock": "EZ - IN: Get an A rank or higher on [[アンビバレンス]]",
-        "ez": {
-            "level": 4,
-            "notes": 238,
-            "charter": "Helabot"
-        },
-        "hd": {
-            "level": 9.6,
-            "notes": 485,
-            "charter": "右果_Ary"
-        },
-        "in": {
-            "level": 14.3,
-            "notes": 1051
-        },
-        "artist": {
-            "format": "<<<1>>> feat. <<<2>>>",
-            "1": "雄之助",
-            "2": "Sennzai"
-        },
-        "charter": "Likey",
-        "illustration": "SEGA (祈莲 modified)",
-        "source": "maimai",
-        "duration": "2:24",
-        "version": "3.16.0"
-    },
-    "Sølips": {
-        "title": "sølips",
-        "pack": "maimai",
-        "unlock": "EZ - IN: Get an A rank or higher on [[Komplexe]]<br>AT: Get an S rank or higher on Sølips [IN]",
-        "ez": {
-            "level": 7.5,
-            "notes": 363,
-            "charter": "Helabot"
-        },
-        "hd": {
-            "level": 12.8,
-            "notes": 935,
-            "charter": "Salt"
-        },
-        "in": {
-            "level": 15.8,
-            "notes": 1128,
-            "charter": {
-                "format": "<<<1|St2.1>>>GHz -Før The Pigeons-",
-                "1": "StR-1"
-            }
-        },
-        "at": {
-            "level": 16.8,
-            "notes": 1175
-        },
-        "artist": "rintaro soma",
-        "charter": {
-            "format":" ø",
-            "1": "XMT小咩兔",
-            "2": "Likey"
-        },
-        "illustration": "SEGA (祈莲 modified)",
-        "source": "maimai",
-        "duration": "2:25",
-        "version": "3.16.0"
-    },
-    "QZKago Requiem": {
-        "pack": "maimai",
-        "unlock": "EZ - IN: Get an A rank or higher on [[Sølips]]<br>AT: Get an S rank or higher on QZKago Requiem [IN]",
-        "ez": {
-            "level": 7.0,
-            "notes": 296,
-            "charter": {
-                "format": "<<<1|->>>",
-                "1": "StR-1"
-            }
-        },
-        "hd": {
-            "level": 12.8,
-            "notes": 935,
-            "charter": {
-                "format": "<<<1>>> EXPERT Life:999",
-                "1": "Rikko"
-            }
-        },
-        "in": {
-            "level": 16.4,
-            "notes": 1259,
-            "charter": "Gausbon"
-        },
-        "at": {
-            "level": 17.4,
-            "notes": 1723
-        },
-        "artist": "t+pazolite",
-        "charter": {
-            "format": "<<<1>>> feat. <<<2|M3ow>>>",
-            "1": "Salt",
-            "2": "M3d1uM"
-        },
-        "illustration": "SEGA (祈莲 modified)",
-        "source": "maimai",
-        "duration": "2:19",
-        "version": "3.16.0"
-    },
-    "000 -Ain Soph Aur-": {
-        "pack": "single",
-        "cost": 16.00,
-        "ez": {
-            "level": 2.5,
-            "notes": 171,
-            "charter": "Magazet"
-        },
-        "hd": {
-            "level": 8.4,
-            "notes": 371,
-            "charter": "Magazet"
-        },
-        "in": {
-            "level": 14.4,
-            "notes": 689
-        },
-        "artist": "Yumeji",
-        "charter": {
-            "format": "<<<1|啊0哒0咔0哟>>> & Dilated",
-            "1": "啊哒咔哟"
-        },
-        "illustration": "NerSAN",
-        "duration": "2:35",
-        "version": "3.16.1"
-    },
-    "So laggy! (feat. Uzumaki)": {
-        "pack": "single",
-        "cost": 16.00,
-        "ez": {
-            "level": 5,
-            "notes": 218
-        },
-        "hd": {
-            "level": 9.5,
-            "notes": 445
-        },
-        "in": {
-            "level": 14.8,
-            "notes": 825
-        },
-        "artist": {
-            "format": "ShrimpCats. (<<<1>>>×<<<2>>>)",
-            "1": "はぁち",
-            "2": "後藤涼輔"
-        },
-        "charter": "Salt",
-        "illustration": "塩焼とまと",
-        "duration": "2:04",
-        "original": true,
-        "version": "3.16.1"
-    },
-    "Xep+ion": {
-        "pack": "liminality",
-        "unlock": "None",
-        "ez": {
-            "level": 2.5,
-            "notes": 123,
-            "charter": "Su1fuR"
-        },
-        "hd": {
-            "level": 9.8,
-            "notes": 368,
-            "charter": {
-                "format": "professional <<<1>>>",
-                "1": "Rikko"
-            }
-         },
-        "in": {
-            "level": 14.8,
-            "notes": 698
-        },
-        "artist": "Acotto",
-        "charter": {
-            "format": "<<<1|Su1fu>>>R<<<2|ikko>>>",
-            "1": "Su1fuR",
-            "2": "Rikko"
-        },
-        "illustration": "クルス (Ctymax modified)",
-        "source": "Liminality",
-        "duration": "1:58",
-        "version": "3.17.0"
-    },
-    "Archidoxen": {
-        "pack": "liminality",
-        "unlock": "Get A rank or higher on [[Xep+ion]]",
-        "ez": {
-            "level": 4,
-            "notes": 262
-        },
-        "hd": {
-            "level": 10,
-            "notes": 543
-        },
-        "in": {
-            "level": 15.6,
-            "notes": 938
-        },
-        "artist": "Se_IRA",
-        "charter": {
-            "format": "<<<1|Rft.>>>",
-            "1": "右果_Ary"
-        },
-        "illustration": "n/a (Ctymax modified)",
-        "source": "Liminality",
-        "duration": "2:04",
-        "version": "3.17.0"
-    },
-    "百鬼֎夜行": {
-        "pack": "liminality",
-        "unlock": "Get an A rank or higher on [[Archidoxen]]",
-        "ez": {
-            "level": 4.5,
-            "notes": 253,
-            "charter": "Magazet"
-        },
-        "hd": {
-            "level": 10.1,
-            "notes": 625,
-            "charter": "Magazet"
-        },
-        "in": {
-            "level": 15.8,
-            "notes": 956
-        },
-        "artist": "Salad Savior",
-        "charter": {
-            "format": "~<<<1>>> vs. <<<2>>>~",
-            "1": "Algax",
-            "2": "RipHall"
-        },
-        "illustration": "軽目くお (Ctymax modified)",
-        "source": "Liminality",
-        "duration": "2:18",
-        "version": "3.17.0"
-    },
-    "BANGING STRIKE": {
-        "image": "BANGING STRIKE jacket new.png",
-        "pack": "single",
-        "cost": 16.00,
-        "ez": {
-            "level": 5,
-            "notes": 371,
-            "charter": {
-                "format": "<<<1|adky>>>",
-                "1": "啊哒咔哟"
-            }
-        },
-        "hd": {
-            "level": 10.2,
-            "notes": 644,
-            "charter": {
-                "format": "<<<1|adky>>>",
-                "1": "啊哒咔哟"
-            }
-        },
-        "in": {
-            "level": 16,
-            "notes": 1248,
-            "charter": {
-                "format": "<<<1>>> & <<<2>>>",
-                "1": "Salt",
-                "2": "Uvernight"
-            }
-        },
-        "at": {
-            "level": 16.9,
-            "notes": 1677
-        },
-        "artist": "Dew Pleiades",
-        "charter": {
-            "format": "<<<1| 魔王、大咩兔の兄 『大咩免』!!>>>",
-            "1": "XMT小咩兔"
-        },
-        "illustration": "Rutumn feat. 汉堡",
-        "duration": "2:38",
-        "version": "3.17.0"
-    },
-    "The Whole Rest": {
-        "pack": "cytus2",
-        "unlock": "None",
-        "ez": {
-            "level": 5,
-            "charter": "Salt",
-            "notes": 217
-        },
-        "hd": {
-            "level": 9.6,
-            "charter": {
-                "format": "<<<1|⁻EASY>>>",
-                "1": "Rikko"
-            },
-            "notes": 484
-        },
-        "in": {
-            "level": 13.6,
-            "notes": 785
-        },
-        "artist": "KIVΛ",
-        "charter": {
-            "format": "<<<1>>> From CYTUS II",
-            "1": "Uvernight"
-        },
-        "illustration": "©2025 Rayark Inc. CYTUS II®",
-        "duration": "2:31",
-        "source": "CYTUS II",
-        "version": "3.18.0"
-    },
-    "Cristalisia": {
-        "pack": "cytus2",
-        "unlock": "EZ - IN: Get an A rank or higher on [[The Whole Rest]]",
-        "ez": {
-            "level": 4,
-            "notes": 241
-        },
-        "hd": {
-            "level": 10.4,
-            "notes": 577
-        },
-        "in": {
-            "level": 14.5,
-            "charter": "Salt",
-            "notes": 721
-        },
-        "artist": "onoken",
-        "charter": "Skuwo",
-        "illustration": "©2025 Rayark Inc. CYTUS II®",
-        "duration": "2:18",
-        "source": "CYTUS II",
-        "version": "3.18.0"
-    },
-    "Hydra": {
-        "pack": "cytus2",
-        "unlock": "EZ - IN: Get an A rank or higher on [[Cristalisia]]<br>AT: Get an S rank or higher on Hydra [IN]",
-        "ez": {
-            "level": 6,
-            "notes": 283
-        },
-        "hd": {
-            "level": 11.6,
-            "notes": 723
-        },
-        "in": {
-            "level": 15.4,
-            "charter": "Su1fuR",
-            "notes": 1025
-        },
-        "at": {
-            "level": 17.1,
-            "charter": {
-                "format": "<<<1|[该用户已被禁言]>>>",
-                "1": "Likey"
-            },
-            "notes": 1567
-        },
-        "artist": {
-            "format": "<<<1>>> Ⅹ <<<2>>>",
-            "1": "James Landino",
-            "2": "Akira Complex"
-        },
-        "charter": "COC",
-        "illustration": "©2025 Rayark Inc. CYTUS II®",
-        "duration": "2:30",
-        "source": "CYTUS II",
-        "version": "3.18.0"
-    },
-    "最高傑作": {
-        "pack": "single",
-        "cost": 16.00,
-        "ez": {
-            "level": 4.5,
-            "charter": "StR-1",
-            "notes": 203
-        },
-        "hd": {
-            "level": 9.3,
-            "charter": "StR-1",
-            "notes": 346
-        },
-        "in": {
-            "level": 13.9,
-            "notes": 697
-        },
-        "artist": "PYKAMIA",
-        "charter": {
-            "format": "<<<1|_鉄>>><<<2|咩兔>>>",
-            "1": "TangScend",
-            "2": "XMT小咩兔"
-        },
-        "illustration": "Nai Guozi",
-        "duration": "2:25",
-        "version": "3.18.1"
-    },
-    "Locomotive": {
-        "pack": "single",
-        "cost": 16.00,
-        "ez": {
-            "level": 3,
-            "charter`": {
-                "format": "<<<1|Minibus>>>",
-                "1": "Magazet"
-            },
-            "notes": 196
-        },
-        "hd": {
-            "level": 9.7,
-            "charter": {
-                "format": "<<<1|Motorcoach>>>",
-                "1": "Magazet"
-            },
-            "notes": 403
-        },
-        "in": {
-            "level": 13.7,
-            "notes": 666
-        },
-        "artist": "♠K",
-        "charter": {
-            "format": "<<<1|Monorail>>>",
-            "1": "Magazet"
-        },
-        "illustration": "Otaku_宅",
-        "duration": "2:30",
-        "version": "3.18.1"
-    },
-    "Alb": {
-        "pack": "cytus2",
-        "unlock": "Get an A rank or higher on [[Alb]]",
-        "ez": {
-            "level": 3.5,
-            "charter": "Likey",
-            "notes": 242
-        },
-        "hd": {
-            "level": 8.9,
-            "notes": 687
-        },
-        "in": {
-            "level": 14.7,
-            "notes": 898
-        },
-        "artist": "Avans",
-        "charter": {
-            "format": "<<<1|Ary>>>",
-             "1": "右果_Ary"
-        },
-        "duration": "2:28",
-        "illustration": "©2026 Rayark Inc. CYTUS II®",
-        "source": "CYTUS II",
-        "version": "3.18.2"
-    },
-    "Incyde": {
-        "pack": "cytus2",
-        "unlock": "Get an A rank or higher on [[Alb]]",
-        "ez": {
-            "level": 7,
-            "charter": {
-                "format": "【梦之起始】<<<1>>> vs. <<<2|盐>>>",
-                "1": "爬爬",
-                "2": "Salt"
-            },
-            "notes": 521
-        },
-        "hd": {
-            "level": 12.1,
-            "charter": {
-                "format": "<<<1|E00200>>>",
-                "1": "Uvernight"
-            },
-            "notes": 1141
-        },
-        "in": {
-            "level": 16.2,
-            "notes": 1648
-        },
-        "artist": {
-            "format": "<<<1|YbeLL>>>",
-            "1": "Sta"
-        },
-        "charter": {
-            "format": "<<<1>>> wanders within <<<2>>>",
-            "1": "Magazet",
-            "2": "StR-1"
-        },
-        "duration": "3:13",
-        "illustration": "©2026 Rayark Inc. CYTUS II®",
-        "source": "CYTUS II",
-        "version": "3.18.2"
-    },
-    "彩": {
-        "pack": "cytus2",
-        "title_latin": "Aya",
-        "unlock": "Get an A rank or higher on [[Incyde]]",
-        "ez": {
-            "level": 6,
-            "charter": "爬爬",
-            "notes": 378
-        },
-        "hd": {
-            "level": 12.5,
-            "charter": {
-                "format": "<<<1|凛>>>",
-                "1": "Uvernight"
-            },
-            "notes": 817
-        },
-        "in": {
-            "level": 16.4,
-            "notes": 1439
-        },
-        "artist": {
-            "format": "<<<1|Misoile>>><<<2|Punch♪>>>",
-            "1": "MisomyL",
-            "2": "Ponchi♪"
-        },
-        "charter": { 
-            "format": "<<<1|OPCII_0584_X>>>",
-            "1": "Simon_Axis"
-        },
-        "duration": "2:40",
-        "illustration": "©2026 Rayark Inc. CYTUS II®",
-        "source": "CYTUS II & DEEMO",
-        "version": "3.18.2"
-    },
-    "彼方へ、名もなき海辺より": {
-        "pack": "single",
-        "cost": 4.00,
-        "ez": {
-            "level": 3.5,
-            "charter": {
-                "format": "<<<1|打打だいずファンクラブ会長 -- Likey！！！>>>",
-                "1": "Likey"
-            },
-            "notes": 217
-        },
-        "hd": {
-            "level": 8.1,
-            "charter": {
-                "format": "<<<1|打打だいずファンクラブ会長 -- Likey！！！>>>",
-                "1": "Likey"
-            },
-            "notes": 409
-        },
-        "in": {
-            "level": 14.5,
-            "notes": 841
-        },
-        "artist": "打打だいず&月乃 ",
-        "charter": {
-                "format": "<<<1|打打だいずファンクラブ会長 -- Likey！！！>>>",
-                "1": "Likey"
-        },
-        "illustration": "月乃",
-        "duration": "2:52",
-        "version": "3.18.3"
-    },
-    "ABYSS MOTION 192.333": {
-        "pack": "single",
-        "cost": "4.00",
-        "ez": {
-            "level": 4.0,
-        "charter": {
-                "format": "<<<1|ABYSS 543.320>>>",
-                "1": "右果_Ary"
-        },
-            "notes": 320
-        },
-        "hd": {
-            "level": 9.8,
-        "charter": {
-                "format": "<<<1|ABYSS 543.320>>>",
-                "1": "右果_Ary"
-        },
-            "notes": 543
-        },
-        "in": {
-            "level": 14.7,
-            "notes":815
-        },
-        "artist": "ariiol & 奏sou",
-        "charter": {
-                "format": "<<<1|MOTION 464.237>>>",
-                "1": ""
-        },
-        "illustration": "kkmfd",
-        "duration": "2:05",
-        "version": "3.18.3"
-        }
+        "version": "4.14.2"
+    }
 }

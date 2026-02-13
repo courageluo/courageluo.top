@@ -82,7 +82,7 @@
             </div>
 
             <div class="rounded-box3">
-                <p id="demo">以下是一个完整的示例脚本，可以<a href="./script.js">点击此处</a>下载：</p>
+                <p id="demo">以下是一个完整的示例脚本，可以<a href="./script.js" download>点击此处</a>下载：</p>
                 <pre class="line-numbers">
                     <code class="language-javascript">
                         const n = document.querySelectorAll('[ans]');
@@ -124,12 +124,6 @@
                         }
 
                         async function runAll(wrongCount) {
-                            document.getElementById('txtPassword').value = '自行修改';
-                            await randomDelay(500, 1000);
-                            document.getElementById('btnContinue').click();
-                            await randomDelay(500, 1000);
-                            document.querySelector('.lxstartBtn').click();
-
                             const wrongIndices = new Set();
                             while (wrongIndices.size < wrongCount) {
                                 wrongIndices.add(Math.floor(Math.random() * 50));
@@ -144,12 +138,13 @@
                         runAll(3);
                     </code>
                 </pre>
-                <p>其中，<code class="language-javascript">runAll(3)</code> 表示随机选择 3 道题目点击错误答案，可以自行修改。修改 <code class="language-javascript">document.getElementById('txtPassword').value = '自行修改';</code> 中的密码即可实现全自动。亦可注释第 40 至 43 行，在第一题答题界面运行即可。</p>
+                <p>其中，<code class="language-javascript">runAll(3)</code> 表示随机选择 3 道题目点击错误答案，可以自行修改，脚本在第一题答题界面运行即可。</p>
             </div>
             
             <div class="rounded-box3">
                 <h3 id="update-log" style="text-align: center;">更新日志</h3>
                 <hr>
+                <p class="update">2026.02.13&emsp;修复一个错误。</p>
                 <p class="update">2026.02.08&emsp;创建脚本。</p>
             </div>
             <div class="rounded-box3">

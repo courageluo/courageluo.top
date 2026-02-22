@@ -125,14 +125,17 @@
 
                         async function runAll(wrongCount) {
                             const wrongIndices = new Set();
-                            while (wrongIndices.size < wrongCount) {
+                            while (wrongIndices.size &lt; wrongCount) {
                                 wrongIndices.add(Math.floor(Math.random() * 50));
                             }
-                            for (let i = 0; i < 50; i++) {
+                            for (let i = 0; i &lt; 50; i++) {
                                 const isWrong = wrongIndices.has(i);
                                 await main(i, isWrong);
                             }
                             console.log('-- All done! --');
+                            await randomDelay(37000,40000);
+                            m.click();
+                            console.log('Clicked SUBMIT');
                         }
 
                         runAll(3);
@@ -144,6 +147,7 @@
             <div class="rounded-box3">
                 <h3 id="update-log" style="text-align: center;">更新日志</h3>
                 <hr>
+                <p class="update">2026.02.22&emsp;加入最后一次点击（若触发安全验证）。</p>
                 <p class="update">2026.02.13&emsp;修复一个错误。</p>
                 <p class="update">2026.02.08&emsp;创建脚本。</p>
             </div>

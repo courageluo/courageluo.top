@@ -46,6 +46,9 @@ async function runAll(wrongCount) {
         await main(i, isWrong);
     }
     console.log('-- All done! --');
+    await randomDelay(37000,40000);
+    m.click();
+    console.log('Clicked SUBMIT');
 }
 
 runAll(3);

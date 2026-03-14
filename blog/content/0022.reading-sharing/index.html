@@ -1,0 +1,88 @@
+<!-- 文学类文本阅读情感/形象分析题答题方法 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="本文以 PDF 形式呈现高考语文现代文情感/形象类题目分析方法。">
+    <title>情感/形象类题目分析 - Courage Luo 的网站</title>
+    <!-- 并行下载大字体 -->
+    <link rel="preload" href="/font/SmileySans-Oblique.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/font/JiangChengHei-500W.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- 链接favicon -->
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <!-- 将外部CSS文件链接到HTML文档 -->
+    <link rel="stylesheet" type="text/css" href="/href/styles.css">
+    <link rel="stylesheet" type="text/css" href="/href/response.css">
+    <!-- 内部CSS文件 -->
+    <style>
+        a {
+            color: #110c50;
+        }
+
+        iframe {
+            border-radius: 5px;
+        }
+
+        /* 背景图片设置 */
+        .background-layer {
+            background-size: 100%;
+        }
+
+        @media (min-width: 950px) {
+            iframe {
+                height: 650px;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            a {
+                color: #17e7e7;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <!-- 边栏 -->
+        <aside class="sidebar">
+            <div class="rounded-box3">
+                <h3 style="text-align: center;">索引</h3>
+                <hr>
+                <ul>
+                    <li><a href="#intro">说明</a></li>
+                    <li><a href="#content">文档内容</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="content-container">
+            <!-- 标题框 -->
+            <div class="rounded-box1">
+                <h1 style="text-align: center;">文学类文本阅读情感/形象分析题答题方法</h1>
+            </div>
+
+            <!-- 内容框 -->
+            <div class="rounded-box2">
+                <p id="intro">该页内容以 PDF 形式呈现。如果无法加载或需下载 PDF 文件，请<a href="./output.pdf">点击这里</a>打开该文档或<a href="./output.pdf" download>点击这里</a>下载该文档。内容可能出现谬误，请注意甄别。</p>
+            </div>
+            <div class="rounded-box3">
+                <p id="content">
+                    <iframe src="/blog/quote-js/pdfjs/web/viewer.html?file=../../../../blog/content/0022.reading-sharing/output.pdf" width="100%" height="500px"></iframe>
+                </p>
+            </div>
+        </main>
+    </div>
+
+    <!-- 页脚 -->
+    <div id="footer"></div>
+
+    <!-- 内部JS文件 -->
+    <script src="/href/script.js" defer></script>
+    <script src="/blog/quote-js/pdfjs/build/pdf.mjs" type="module"></script>
+</body>
+
+</html>

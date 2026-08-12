@@ -1,0 +1,298 @@
+<!-- ESC/P 驱动 LQ-630K -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用 ESC/P 指令集驱动 LQ-630K - Courage Luo 的网站</title>
+    <!-- 并行下载大字体 -->
+    <link rel="preload" href="/font/SmileySans-Oblique.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/font/JiangChengHei-500W.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- 链接favicon -->
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <!-- 将外部CSS文件链接到HTML文档 -->
+    <link rel="stylesheet" type="text/css" href="/href/styles.css">
+    <link rel="stylesheet" type="text/css" href="/href/response.css">
+    <link rel="stylesheet" type="text/css" href="/blog/quote-js/prismjs/prism.css">
+    <link rel="stylesheet" type="text/css" href="/blog/quote-js/katex/katex.min.css">
+    <!-- 内部CSS文件 -->
+    <style>
+        /* 背景图片设置 */
+        .background-layer {
+            background-size: 100%;
+        }
+
+        a {
+            color: #110c50;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        .effect {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 7.5px;
+            border: 2.5px solid #cccccc44;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            a {
+                color: #50d2d2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <!-- 边栏 -->
+        <aside class="sidebar">
+            <div class="rounded-box3">
+                <h3 style="text-align: center;">索引</h3>
+                <hr>
+                <ul>
+                    <li><a href="#intro">前言</a></li>
+                    <li><a href="#esc-p-overview">ESC/P 指令概述</a></li>
+                    <li><a href="#python-driver-example">Python 驱动示例</a></li>
+                    <li><a href="#python-print-example">Python 直接打印文本示例程序</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- 内容 -->
+        <main class="content-container">
+            <!-- 标题框 -->
+            <div class="rounded-box1">
+                <h1 style="text-align: center;">用 ESC/P 指令集驱动 LQ-630K</h1>
+            </div>
+
+            <!-- 内容框 -->
+            <div class="rounded-box3">
+                <p id="intro">最近在闲鱼上 49 元淘了一个 <a href="https://www.epson.com.cn/products/dot/1058/epson_lq_630k/" target="_blank">Epson LQ-630K 针式打印机</a>，了解到可以使用 ESC/P 指令集进行驱动，遂研究如下。</p>
+            </div>
+
+            <div class="rounded-box3">
+                <h3 id="esc-p-overview">ESC/P 指令概述</h3>
+                <hr>
+                <p>ESC/P（Epson Standard Code for Printers）是 Epson 开发的一种打印机控制语言，用于控制其针式打印机的打印行为，基本指令如下（[…] 中内容表示 ASCII 控制字符）：</p>
+                <ol>
+                    <li>[ESC] @（<code class="language-none">1B 40</code>）：初始化打印机，恢复默认设置</li>
+                    <li>[LF]（<code class="language-none">0A</code>）：打印缓存内容，换行</li>
+                    <li>[CR]（<code class="language-none">0D</code>）：回车，把打印头移到左边</li>
+                    <li>[FF]（<code class="language-none">0C</code>）：换页</li>
+                    <li>[ESC] J $n$（<code class="language-none">1B 4A n</code>）：不换行，走纸 $\dfrac{n}{180}$ 英寸</li>
+                    <li>[ESC] x $n$（<code class="language-none">1B 78 n</code>）：设置打印质量，$n=0$ 为草稿质量，$n=1$ 为信函质量</li>
+                </ol>
+                <p>每次打印任务开始前都应该发送 [ESC] @ 初始化，避免之前的状态残留影响输出。</p>
+                <p>以下命令用来切换字体样式（<code class="language-none">/</code> 前表示开启样式，后表示关闭样式）：</p>
+                <ol>
+                    <li>[ESC] E / [ESC] F（<code class="language-none">1B 45 / 1B 46</code>）：加粗</li>
+                    <li>[ESC] G / [ESC] H（<code class="language-none">1B 47 / 1B 48</code>）：双击打</li>
+                    <li>[ESC] 4 / [ESC] 5（<code class="language-none">1B 34 / 1B 35</code>）：斜体</li>
+                    <li>[ESC] W 1 / [ESC] W 0（<code class="language-none">1B 57 01 / 1B 57 00</code>）：倍宽</li>
+                </ol>
+            </div>
+            <div class="rounded-box3">
+                <h3 id="python-driver-example">Python 驱动示例</h3>
+                <hr>
+                <p>有了相应的指令，只需要把数据发给打印机即可。下面给出一段 Python 核心代码，使用 <code class="language-python">win32print</code> 模块发送 <code class="language-python">data_bytes</code> 至打印机：</p>
+                <pre class="line-numbers">
+                    <code class="language-python">
+                        def send_raw_to_printer(printer_name, data_bytes):
+                            hPrinter = win32print.OpenPrinter(printer_name)
+                            try:
+                                hJob = win32print.StartDocPrinter(hPrinter, 1, ("Print", None, "RAW"))
+                                win32print.StartPagePrinter(hPrinter)
+                                win32print.WritePrinter(hPrinter, data_bytes)
+                                win32print.EndPagePrinter(hPrinter)
+                                win32print.EndDocPrinter(hPrinter)
+                            finally:
+                                win32print.ClosePrinter(hPrinter)
+                    </code>
+                </pre>
+                <p>其中：</p>
+                <ol>
+                    <li><code class="language-python">def send_raw_to_printer(printer_name, data_bytes):</code> 定义函数接收两个参数，<code class="language-python">printer_name</code> 是 Windows 系统中安装的打印机名称（例如我的是“EPSON LQ-630K ESC/P2”），<code class="language-python">data_bytes</code> 是要发送的原始字节串，包含上面的控制指令和文本）。</li>
+                    <li><code class="language-python">hPrinter = win32print.OpenPrinter(printer_name)</code> 向 Windows 打印后台处理程序申请打开指定打印机，返回一个打印机句柄 <code class="language-python">hPrinter</code>，后续操作都依赖这个句柄</li>
+                    <li><code class="language-python">try: ... finally: ...</code> 用于确保无论中间是否出错，最终都能正确释放资源，避免句柄泄漏。</li>
+                    <li><code class="language-python">hJob = win32print.StartDocPrinter(hPrinter, 1, ("Print", None, "RAW"))</code> 向系统注册一个打印文档，返回作业句柄 <code class="language-python">hJob</code>。虽然后面没有用到，但这句定义了文档名称 <code class="language-python">"Print"</code>、输出文件路径（<code class="language-python">None</code> 表示不输出，直接发送到打印机）、数据模式（<code class="language-python">"RAW"</code> 让 Windows直接把数据原封不动地透传给打印机端口）。</li>
+                    <li><code class="language-python">win32print.WritePrinter(hPrinter, data_bytes)</code> 将字节数据写入打印机缓冲区，<code class="language-python">data_bytes</code> 后续则会交给打印机固件处理。</li>
+                    <li><code class="language-python">win32print.EndPagePrinter(hPrinter)</code> 标记当前页结束，主要是配合 Windows 打印作业管理。</li>
+                    <li><code class="language-python">win32print.EndDocPrinter(hPrinter)</code> 结束整个打印文档，调用后，Windows 打印后台处理程序将这个作业排入队列，数据开始发往打印机。</li>
+                    <li>最后 <code class="language-python">win32print.ClosePrinter(hPrinter)</code> 关闭打印机句柄，释放系统资源，否则可能导致打印队列中残留挂起的作业，或造成句柄泄漏。</li>
+                </ol>
+                <p>ESC/P 指令集工作时，流程分两种：</p>
+                <ol>
+                    <li>收到 <code class="language-python">0x1B</code> → 进入命令模式 → 读取下一个字节判断命令类型 → 读取参数 → 执行</li>
+                    <li>收到普通字节 → 进入字符模式 → 查找字符表 → 打印对应字形 → 移动打印头</li>
+                </ol>
+                <p>因此，<code class="language-python">data_bytes</code> 的构造只需确保符合上述两种格式即可，例如构造一段 Hello World 的 <code class="language-python">data_bytes</code> 步骤如下：</p>
+                <ol>
+                    <li><code class="language-none">1B 40</code>（[ESC] @）：初始化打印机</li>
+                    <li><code class="language-none">48 65 6C 6C 6F</code>（Hello）：普通字符，直接打印</li>
+                    <li><code class="language-none">20</code>（ ）：空格，直接打印</li>
+                    <li><code class="language-none">57 6F 72 6C 64</code>（World）：普通字符，直接打印</li>
+                    <li><code class="language-none">0D 0A</code>（[CR] [LF]）：回车，换行</li>
+                    <li><code class="language-none">0C</code>（[FF]）：换页（可选）</li>
+                </ol>
+                <p>还有一点需要注意的是，中文字符采用的编码为 GBK，所以构造包含中文的 <code class="language-python">data_bytes</code> 时，使用 Python 的 <code class="language-python">encode('gbk')</code> 即可，例如 <code class="language-python">data_bytes += "你好，世界".encode('gbk')</code>，而对于一般 ASCII 字符可以直接添加，例如 <code class="language-python">data_bytes += b"Hello, World!"</code>，当然，直接使用 <code class="language-python">data_bytes += "Hello, World!".encode('gbk')</code> 也是可以的。</p>
+            </div>
+
+            <div class="rounded-box3">
+                <h3 id="python-print-example">Python 直接打印文本示例程序</h3>
+                <hr>
+                <p>下面给出一个完整的 Python 示例程序，演示如何使用 ESC/P 指令集驱动 Epson LQ-630K 打印文本，这里我使用换行符作为分割，用类似 $\LaTeX$ 的语法（<code class="language-latex">\b{...} \i{...}</code> 等）控制文本样式，打印时直接修改 <code class="language-python">content</code> 的内容即可：</p>
+                <pre class="line-numbers">
+                    <code class="language-python">
+                        import win32print
+
+                        def send_raw_to_printer(printer_name, data_bytes):
+                            hPrinter = win32print.OpenPrinter(printer_name)
+                            try:
+                                hJob = win32print.StartDocPrinter(hPrinter, 1, ("Print", None, "RAW"))
+                                win32print.StartPagePrinter(hPrinter)
+                                win32print.WritePrinter(hPrinter, data_bytes)
+                                win32print.EndPagePrinter(hPrinter)
+                                win32print.EndDocPrinter(hPrinter)
+                            finally:
+                                win32print.ClosePrinter(hPrinter)
+
+                        class ESCP2Markup:
+                            COMMANDS = {
+                                'b': (b'\x1B\x45',      b'\x1B\x46'),      # ESC E / F    加粗
+                                'd': (b'\x1B\x47',      b'\x1B\x48'),      # ESC G / H    双击打
+                                'i': (b'\x1B\x34',      b'\x1B\x35'),      # ESC 4 / 5    斜体
+                                'w': (b'\x1B\x57\x01',  b'\x1B\x57\x00'),  # ESC W 1 / 0  倍宽
+                            }
+
+                            CMD_INIT = b'\x1B\x40'      # ESC @    初始化
+                            CMD_LQ   = b'\x1B\x78\x01'  # ESC x 1  LQ模式
+                            CRLF     = b'\x0D\x0A'      #          回车换行
+                            FF       = b'\x0C'          #          换页
+
+                            def __init__(self):
+                                self.data = bytearray()
+                                self.style_stack = []
+
+                            def init(self):
+                                self.data += self.CMD_INIT
+                                self.data += self.CMD_LQ
+                                self.style_stack = []
+
+                            # 解析一行文本
+                            def parse(self, text):
+                                i = 0
+                                while i < len(text):
+                                    ch = text[i]
+
+                                    # 命令 / 转义
+                                    if ch == '\\' and i + 1 < len(text):
+                                        nxt = text[i + 1]
+
+                                        # 转义
+                                        if nxt in '\\{}':
+                                            self.data += nxt.encode('gbk')
+                                            i += 2
+                                            continue
+
+                                        # 样式命令
+                                        if nxt in self.COMMANDS and i + 2 < len(text) and text[i + 2] == '{':
+                                            self.style_stack.append(nxt)
+                                            on_cmd, _ = self.COMMANDS[nxt]
+                                            self.data += on_cmd
+                                            i += 3
+                                            continue
+
+                                        # 原样输出
+                                        self.data += '\\'.encode('gbk')
+                                        i += 1
+                                        continue
+
+                                    # 关闭当前样式块
+                                    if ch == '}':
+                                        if self.style_stack:
+                                            cmd_key = self.style_stack.pop()
+                                            _, off_cmd = self.COMMANDS[cmd_key]
+                                            self.data += off_cmd
+                                        i += 1
+                                        continue
+
+                                    # 普通字符
+                                    self.data += ch.encode('gbk')
+                                    i += 1
+
+                            def newline(self):
+                                self.data += self.CRLF
+
+                            def form_feed(self):
+                                # 关闭所有未闭合样式
+                                while self.style_stack:
+                                    cmd_key = self.style_stack.pop()
+                                    _, off_cmd = self.COMMANDS[cmd_key]
+                                    self.data += off_cmd
+                                self.data += self.FF
+
+                            def get_bytes(self):
+                                return bytes(self.data)
+
+                        # 主程序
+                        PRINTER_NAME = "EPSON LQ-630K ESC/P2"
+
+                        # 演示内容
+                        content = r"""\b{加粗}  \d{双击打}  \i{斜体}  \w{倍宽}
+                        \b{\i{加粗斜体}}  \w{\i{倍宽斜体}}  \b{\w{加粗倍宽}}
+                        普通文本  \{不是命令\}  这是反斜杠\\
+                        English Test  1234567890  \b{Bold}  \i{Italic}  \w{Wide}
+                        \w{\b{Bold Wide}}  \w{\i{Italic Wide}}
+                        \w{\b{\i{Bold Italic Wide}}}
+                        """
+
+                        if __name__ == "__main__":
+                            parser = ESCP2Markup()
+                            parser.init()
+
+                            for line in content.strip().splitlines():
+                                parser.parse(line)
+                                parser.newline()
+
+                            parser.form_feed()
+
+                            send_raw_to_printer(PRINTER_NAME, parser.get_bytes())
+                            print("已发送")
+                    </code>
+                </pre>
+                <p>打印效果如下：</p>
+                <img class="effect" src="./effect.webp" alt="打印效果">
+                <p></p>
+            </div>
+        </main>
+    </div>
+
+    <!-- 页脚 -->
+    <div id="footer"></div>
+
+    <!-- 内部JS文件 -->
+    <script src="/href/script.js" defer></script>
+    <script src="/blog/content/0007.file-read/prism.js"></script>
+    <script src="/blog/quote-js/katex/katex.min.js"></script>
+    <script src="/blog/quote-js/katex/contrib/copy-tex.min.js"></script>
+    <script src="/blog/quote-js/katex/contrib/auto-render.min.js"></script>
+    <script>
+        // 配置KATEX
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            })
+        });
+    </script>
+</body>
+
+</html>

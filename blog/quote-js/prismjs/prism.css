@@ -10,7 +10,7 @@ https://prismjs.com/download#themes=prism-tomorrow&languages=markup+css+clike+ja
  * Modified by Courage Luo
  * Changed some display effects like border radius and transitions
  * Including different color decided by prefers color scheme
- * Mar. 16th, 2024; Feb. 8th, 2025
+ * Mar. 16th, 2024; Feb. 8th, 2025; Aug. 12th, 2026
  */
 
 code[class*="language-"],
@@ -52,7 +52,7 @@ pre[class*="language-"] {
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-	padding: .1em;
+	padding: .1em .3em;
 	margin: 0 .1em 0 .1em;
 	border-radius: .3em;
 	white-space: normal;
@@ -220,9 +220,6 @@ div.code-toolbar > .toolbar > .toolbar-item > button {
 	line-height: normal;
 	overflow: visible;
 	padding: 0;
-	-webkit-user-select: none; /* for button */
-	-moz-user-select: none;
-	-ms-user-select: none;
 }
 
 div.code-toolbar > .toolbar > .toolbar-item > a,

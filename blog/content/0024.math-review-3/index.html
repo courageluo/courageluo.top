@@ -1,0 +1,257 @@
+<!-- 数学知识点记录 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="这篇文章记录了高中人教 B 版选修部分的数学知识点，以及一些扩展内容。">
+    <title>数学知识点记录 - Courage Luo 的网站</title>
+    <!-- 并行下载大字体 -->
+    <link rel="preload" href="/font/SmileySans-Oblique.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/font/JiangChengHei-500W.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- 链接favicon -->
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <!-- 将外部CSS文件链接到HTML文档 -->
+    <link rel="stylesheet" type="text/css" href="/href/styles.css">
+    <link rel="stylesheet" type="text/css" href="/href/response.css">
+    <link rel="stylesheet" type="text/css" href="/blog/quote-js/katex/katex.min.css">
+    <!-- 内部CSS文件 -->
+    <style>
+        /* 调试用 */
+        /* * {
+            outline: solid rgb(255, 0, 0) 1px !important;
+            background: #000 !important;
+            color: #fff !important;
+        } */
+
+        /* 问题：在小于一定宽度时，右边会留白
+           临时解决方案如下 */
+        @media screen {
+            html {
+                width: 100%;
+                overflow-x: hidden;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+        }
+
+        a {
+            color: #110c50;
+        }
+
+        .formula-container {
+            position: table-cell;
+            vertical-align: middle;
+        }
+
+        .formula-rectangle {
+            max-width: calc(100% - 15px);
+            overflow-x: auto;
+            overflow-y: hidden;
+            display: inline-block;
+            vertical-align: middle;
+            white-space: nowrap;
+            border: 1.5px solid black;
+            border-radius: 3px;
+            padding: 5px;
+            margin: 4px;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        #text-right {
+            position: absolute;
+            bottom: 0px;
+            right: -60px;
+            transform: translateX(-100%);
+        }
+
+        @counter-style parentheses {
+            system: fixed;
+            symbols: "(1)" "(2)" "(3)" "(4)" "(5)" "(6)" "(7)" "(8)" "(9)" "(10)";
+            suffix: " ";
+        }
+        
+        .margin-ul {
+            list-style: parentheses;
+            /* white-space: nowrap; */
+            margin-left: -13px;
+        }
+
+        li {
+            margin: 4px 0;
+        }
+
+        .scroll-item {
+            width: 100%;
+            white-space: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        /* 一点响应式设计 */
+        @media (min-width: 768px) {
+            #index-box {
+                display: none;
+            }
+
+            #text-right {
+                display: none;
+            }
+        }
+
+        /* 背景图片设置 */
+        .background-layer {
+            background-size: 100%;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            a {
+                color: #50d2d2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <!-- 边栏 -->
+        <aside class="sidebar">
+            <!-- 索引框 -->
+            <div class="rounded-box3">
+                <h3 style="text-align: center;">索引目录</h3>
+                <hr>
+                <ul id="target-index" style="column-count: 1;">
+                    <li><a href="#func-limit">函数与极限</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- 主要内容 -->
+        <main class="content-container">
+            <!-- 标题框 -->
+            <div class="rounded-box1">
+                <h1 style="text-align: center;">数学知识点记录</h1>
+            </div>
+
+            <div class="rounded-box3">
+                <p>适用于同济八版高等数学。</p>
+            </div>
+
+            <!-- 索引框 -->
+            <div id="index-box" class="rounded-box3">
+                <h3 id="index" style="text-align: center;">索引目录</h3>
+                <hr>
+                <ul id="content-index" style="column-count: 2;">
+                    <li><a href="#func-limit">函数与极限</a></li>
+                </ul>
+            </div>
+
+            <!-- 内容框 -->
+            <div class="rounded-box3">
+                <div class="container">
+                    <h3 id="func-limit" class="section-title">函数与极限</h3>
+                    <a href="#index" id="text-right">返回索引</a>
+                </div>
+                <hr>
+                <ol>
+                    <li>
+                        映射<br>
+                        设 $X, Y \ne \varnothing$，$\exist$ 规则 $f$，使 $\forall x \in X$，有唯一确定的 $y \in Y$ 与之对应，称 $f$ 为 $X$ 到 $Y$ 的映射，记作 $f: X \to Y$
+                        <ol class="margin-ul">
+                            <li>$y = f(x)$ 称为 $x$ 在 $f$ 下的像</li>
+                            <li>$x$ 称为 $y$ 在 $f$ 下的像</li>
+                            <li>$X$ 称为 $f$ 的定义域</li>
+                            <li>$Y$ 的子集 $R_f = f(X) = \{ f(x) \kern2pt|\kern2pt x \in X\}$ 称为 $f$ 的值域</li>
+                        </ol>
+                    </li>
+                    <li>
+                        逆映射<br>
+                        设 $f: D \to f(D)$ 为单射，则 $\exist f^{-1}: f(D) \to D$ 使 $\forall y \in f(D)$，$f^{-1} (y) = x$（其中 $f(x) = y$），则 $f^{-1}$ 称为逆映射
+                    </li>
+                    <li>
+                        复合映射<br>
+                        设 $\forall x \in D \overset{g}{\mapsto} u = g(x) \in g(D)$，$\forall u \in D_1 \overset{f}{\mapsto} y = f(u) \in Y = f(D_1)$，则 $g(D) \subset D_1$ 时，可定义 $D$ 到 $Y$ 的复合映射，记作 $y = f(g(x))$ 或 $(f \circ g)(x), x \in D$
+                    </li>
+                    <li>
+                        函数<br>
+                        设 $D \subset \mathbf R$，则 $f: D \to R$ 为定义在 $D$ 上的函数，记为 $y = f(x), x \in D$
+                    </li>
+                    <li>
+                        函数的特性<br>
+                        设 $y = f(x), x \in D$，且 $I \subset D$
+                        <ol class="margin-ul">
+                            <li>有界性：$\forall x \in D$（或 $I$），$\exist M &gt; 0$，$|f(x)| \le M$，称 $f(x)$ 为有界函数（在 $I$ 上有界），同理可定义上界、下界</li>
+                            <li>单调性：$\forall x_1, x_2 \in I$，$x_1 &lt; x_2$ 时，若 $f(x_1) &lt; f(x_2)$，则称 $f(x)$ 在 $I$ 上单调递增；若 $f(x_1) &gt; f(x_2)$，则称 $f(x)$ 在 $I$ 上单调递减</li>
+                            <li>奇偶性：$\forall x \in D$，且 $-x \in D$，若 $f(-x) = f(x)$，则称 $f(x)$ 为偶函数；若 $f(-x) = -f(x)$，则称 $f(x)$ 为奇函数</li>
+                            <li>周期性：$\forall x \in D$，$\exist T > 0$，$x \pm T \in D$，$f(x + T) = f(x)$，则称 $f(x)$ 为周期函数，$T$ 称为周期</li>
+                        </ol>
+                    </li>
+                    <li>逆函数与复合函数可根据 2、3 点定义给出</li>
+                    <li>
+                        双曲函数与反双曲函数<br>
+                        <ol class="margin-ul">
+                            <li>双曲正弦（奇）：$\sh x = \dfrac{\mathrm e^x - \mathrm e^{-x}}{2}$</li>
+                            <li>双曲余弦（偶）：$\ch x = \dfrac{\mathrm e^x + \mathrm e^{-x}}{2}$</li>
+                            <li>双曲正切（奇）：$\th x = \dfrac{\sh x}{\ch x}$</li>
+                            <li>反双曲正弦（奇）：$\mathrm{arsh}\kern2pt x = \ln(x + \sqrt{x^2 + 1})$</li>
+                            <li>反双曲余弦：$\mathrm{arch}\kern2pt x = \ln(x + \sqrt{x^2 - 1})$</li>
+                            <li>反双曲正切（奇）：$\mathrm{arth}\kern2pt x = \dfrac{1}{2} \ln \dfrac{1 + x}{1 - x}$</li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </main>
+    </div>
+
+    <!-- 页脚 -->
+    <div id="footer"></div>
+
+    <!-- 内部JS文件 -->
+    <script src="/href/script.js" defer></script>
+    <!-- <script src="/blog/title/title.js" defer></script> -->
+    <script src="/blog/quote-js/katex/katex.min.js"></script>
+    <script src="/blog/quote-js/katex/contrib/copy-tex.min.js"></script>
+    <script src="/blog/quote-js/katex/contrib/auto-render.min.js"></script>
+    <!-- <script id="MathJax-script" src="/blog/quote-js/mathjax/es5/tex-mml-chtml.js"></script> -->
+    <script>
+        // 调试检测页面宽度
+        // function log() {
+        //     console.log(window.innerWidth);
+        // } log();
+
+        // window.addEventListener('resize', log);
+
+        // 配置KATEX
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                macros: {
+                    '\\le': '\\leqslant',
+                    '\\ge': '\\geqslant'
+                }
+            })
+        });
+
+        // 复制索引目录
+        document.addEventListener("DOMContentLoaded", function() {
+            const sourceUl = document.querySelector('#content-index');
+            const targetUl = document.querySelector('#target-index');
+            targetUl.innerHTML = sourceUl.innerHTML;
+        });
+    </script>
+</body>
+
+</html>

@@ -208,6 +208,78 @@
                             <li>反双曲正切（奇）：$\mathrm{arth}\kern2pt x = \dfrac{1}{2} \ln \dfrac{1 + x}{1 - x}$</li>
                         </ol>
                     </li>
+                    <li>
+                        数列极限的 $\varepsilon - N$ 定义<br>
+                        $\displaystyle \lim _{n \to \infty} x_n = A \Leftrightarrow \forall \varepsilon &gt; 0, \exist N, n &gt; N, |x_n - A| &lt; \varepsilon$
+                    </li>
+                    <li>
+                        收敛数列的性质<br>
+                        <ol class="margin-ul">
+                            <li>收敛数列的极限唯一</li>
+                            <li>收敛数列一定有界</li>
+                            <li>收敛数列的保号性：若 $\displaystyle \lim _{n \to \infty} x_n = a$ 且 $a &gt; 0$（ $a &lt; 0$），则 $\exist N \in \mathbf N ^+$，当 $n &gt; N$，有 $x_n &gt; 0$（$x_n &lt; 0$）</li>
+                            <li>收敛数列的任一子数列收敛于同一极限</li>
+                        </ol>
+                    </li>
+                    <li>
+                        $\displaystyle \lim _{n \to \infty} x_n = a \Rightarrow \lim _{n \to \infty} |x_n| = |a|$，反之未必成立<br>
+                        $\displaystyle \lim _{k \to \infty} x_{2k-1} = a$ 且 $\displaystyle \lim _{k \to \infty} x_{2k} = a \Leftrightarrow \displaystyle \lim _{n \to \infty} x_n = a$
+                    </li>
+                    <li>
+                        函数极限的 $\varepsilon - \delta$ 定义<br>
+                        $\displaystyle \lim _{x \to x_0} f(x) = A \Leftrightarrow \forall \varepsilon &gt; 0, \exist \delta &gt; 0, 0 &lt; |x - x_0| &lt; \delta, |f(x) - A| &lt; \varepsilon$
+                    </li>
+                    <li>
+                        左右极限<br>
+                        $f(x_0^-) = \displaystyle\lim_{x \to x_0^-} f(x) = A \Leftrightarrow \forall \varepsilon &gt; 0, \exist \delta &gt; 0, x \in (x_0 - \delta, x_0), |f(x) - A| &lt; \varepsilon$<br>
+                        $f(x_0^+) = \displaystyle\lim_{x \to x_0^+} f(x) = A \Leftrightarrow \forall \varepsilon &gt; 0, \exist \delta &gt; 0, x \in (x_0, x_0 + \delta), |f(x) - A| &lt; \varepsilon$<br>
+                        $\displaystyle \lim _{x \to x_0} f(x) = A \Leftrightarrow f(x_0^-) = f(x_0^+) = A$
+                    </li>
+                    <li>
+                        函数极限的 $\varepsilon - X$ 定义<br>
+                        $\displaystyle \lim _{x \to +\infty} f(x) = A \Leftrightarrow \forall \varepsilon &gt; 0, \exist X, x &gt; X, |f(x) - A| &lt; \varepsilon$<br>
+                        $\displaystyle \lim _{x \to -\infty} f(x) = A \Leftrightarrow \forall \varepsilon &gt; 0, \exist X, x &lt; -X, |f(x) - A| &lt; \varepsilon$<br>
+                        $\displaystyle \lim _{x \to \infty} f(x) = A \Leftrightarrow \forall \varepsilon &gt; 0, \exist X, |x| &gt; X, |f(x) - A| &lt; \varepsilon$<br>
+                        $\displaystyle \lim _{x \to \infty} f(x) = A \Leftrightarrow \lim_{x \to +\infty} f(x) = A$ 且 $\displaystyle \lim_{x \to -\infty} f(x) = A$
+                    </li>
+                    <li>
+                        函数极限的性质<br>
+                        <ol class="margin-ul">
+                            <li>函数极限唯一</li>
+                            <li>局部有界性：若 $\displaystyle \lim _{x \to x_0} f(x) = A$，则 $\exist M, \delta > 0$，当 $0 &lt; |x - x_0| &lt; \delta$ 时，有 $|f(x)| &lt; M$</li>
+                            <li>函数极限的保号性：若 $\displaystyle \lim _{x \to x_0} f(x) = A$ 且 $A &gt; 0$（$A &lt; 0$），则 $\exist \mathring U (x_0, \delta)$，当 $x \in \mathring U (x_0, \delta)$ 时，有 $f(x) &gt; 0$（$f(x) &lt; 0$）</li>
+                            <li>函数极限的任一子函数极限收敛于同一极限</li>
+                        </ol>
+                    </li>
+                    <li>
+                        无穷小：若 $\displaystyle \lim _{x \to x_0} f(x) = 0$，则称 $f(x)$ 为 $x \to x_0$ 时的无穷小<br>
+                        无穷大：若 $\forall M &gt; 0, \exist \delta &gt; 0$（$X > 0$），当 $0 &lt; |x - x_0| &lt; \delta$（$|x| > X$）时，有 $|f(x)| &gt; M$，则称 $f(x)$ 为 $x \to x_0$ 时的无穷大，记作 $\displaystyle \lim _{x \to x_0} f(x) = \infty$（$\displaystyle \lim _{x \to \infty} f(x) = \infty$）
+                    </li>
+                    <li>
+                        在自变量的同一变化过程中，若 $f(x)$ 为无穷大，则 $\dfrac{1}{f(x)}$ 为无穷小；若 $f(x) \ne 0$ 为无穷小，则 $\dfrac{1}{f(x)}$ 为无穷大
+                    </li>
+                    <li>
+                        两个无穷小的和还是无穷小，有限个无穷小的和还是无穷小，但无限个无穷小的和不一定是无穷小<br>
+                        有界函数与无穷小的乘积是无穷小，常数与无穷小的乘积是无穷小，有限个无穷小的乘积是无穷小
+                    </li>
+                    <li>
+                        极限的四则运算<br>
+                        设 $\lim f(x) = A$，$\lim g(x) = B$，则：
+                        <ol class="margin-ul">
+                            <li>$\lim (f(x) \pm g(x)) = \lim f(x) \pm \lim g(x) = A \pm B$</li>
+                            <li>$\lim f(x)g(x) = \lim f(x) \lim g(x) = AB$</li>
+                            <li>$B \ne 0$ 时，$\lim \dfrac{f(x)}{g(x)} = \dfrac{\lim f(x)}{\lim g(x)} = \dfrac AB$</li>
+                        </ol>
+                    </li>
+                    <li>
+                        复合函数的极限运算<br>
+                        设 $\displaystyle \lim _{x \to x_0} g(x) = u$，且 $\exist \delta_0 &gt; 0$，当 $x \in \mathring U (x_0, \delta_0) 时$，$g(x) \ne u_0$，又 $\displaystyle \lim _{u \to u_0} f(u) = A$，则 $\displaystyle \lim_{x \to x_0} f(g(x)) = \lim_{u \to u_0} f(u) = A$
+                    </li>
+                    <li>
+                        两个重要极限<br>
+                        $\displaystyle \lim _{x \to 0} \dfrac{\sin x}x = 1$，$\displaystyle \lim _{x \to \infty} \left( 1 + \dfrac 1x \right) ^x = \mathrm e$<br>
+                        其中 $x$ 均可替换为相应条件下的函数 $f(x)$
+                    </li>
                 </ol>
             </div>
         </main>

@@ -203,9 +203,9 @@
                             <li>双曲正弦（奇）：$\sh x = \dfrac{\mathrm e^x - \mathrm e^{-x}}{2}$</li>
                             <li>双曲余弦（偶）：$\ch x = \dfrac{\mathrm e^x + \mathrm e^{-x}}{2}$</li>
                             <li>双曲正切（奇）：$\th x = \dfrac{\sh x}{\ch x}$</li>
-                            <li>反双曲正弦（奇）：$\mathrm{arsh}\kern2pt x = \ln(x + \sqrt{x^2 + 1})$</li>
-                            <li>反双曲余弦：$\mathrm{arch}\kern2pt x = \ln(x + \sqrt{x^2 - 1})$</li>
-                            <li>反双曲正切（奇）：$\mathrm{arth}\kern2pt x = \dfrac{1}{2} \ln \dfrac{1 + x}{1 - x}$</li>
+                            <li>反双曲正弦（奇）：$\operatorname{arsh} x = \ln(x + \sqrt{x^2 + 1})$</li>
+                            <li>反双曲余弦：$\operatorname{arch} x = \ln(x + \sqrt{x^2 - 1})$</li>
+                            <li>反双曲正切（奇）：$\operatorname{arth} x = \dfrac{1}{2} \ln \dfrac{1 + x}{1 - x}$</li>
                         </ol>
                     </li>
                     <li>
@@ -230,17 +230,12 @@
                         $\displaystyle \lim _{x \to x_0} f(x) = A \Leftrightarrow \forall \varepsilon &gt; 0, \exist \delta &gt; 0, 0 &lt; |x - x_0| &lt; \delta, |f(x) - A| &lt; \varepsilon$
                     </li>
                     <li>
-                        左右极限<br>
-                        $f(x_0^-) = \displaystyle\lim_{x \to x_0^-} f(x) = A \Leftrightarrow \forall \varepsilon &gt; 0, \exist \delta &gt; 0, x \in (x_0 - \delta, x_0), |f(x) - A| &lt; \varepsilon$<br>
-                        $f(x_0^+) = \displaystyle\lim_{x \to x_0^+} f(x) = A \Leftrightarrow \forall \varepsilon &gt; 0, \exist \delta &gt; 0, x \in (x_0, x_0 + \delta), |f(x) - A| &lt; \varepsilon$<br>
-                        $\displaystyle \lim _{x \to x_0} f(x) = A \Leftrightarrow f(x_0^-) = f(x_0^+) = A$
+                        函数极限的 $\varepsilon - X$ 定义<br>
+                        $\displaystyle \lim _{x \to \infty} f(x) = A \Leftrightarrow \forall \varepsilon &gt; 0, \exist X, |x| &gt; X, |f(x) - A| &lt; \varepsilon$
                     </li>
                     <li>
-                        函数极限的 $\varepsilon - X$ 定义<br>
-                        $\displaystyle \lim _{x \to +\infty} f(x) = A \Leftrightarrow \forall \varepsilon &gt; 0, \exist X, x &gt; X, |f(x) - A| &lt; \varepsilon$<br>
-                        $\displaystyle \lim _{x \to -\infty} f(x) = A \Leftrightarrow \forall \varepsilon &gt; 0, \exist X, x &lt; -X, |f(x) - A| &lt; \varepsilon$<br>
-                        $\displaystyle \lim _{x \to \infty} f(x) = A \Leftrightarrow \forall \varepsilon &gt; 0, \exist X, |x| &gt; X, |f(x) - A| &lt; \varepsilon$<br>
-                        $\displaystyle \lim _{x \to \infty} f(x) = A \Leftrightarrow \lim_{x \to +\infty} f(x) = A$ 且 $\displaystyle \lim_{x \to -\infty} f(x) = A$
+                        $\displaystyle \lim _{x \to x_0} f(x) = A \Leftrightarrow f(x_0^-) = f(x_0^+) = A$<br>
+                        $\displaystyle \lim_{x \to +\infty} f(x) = A$ 且 $\displaystyle \lim_{x \to -\infty} f(x) = A \Leftrightarrow \lim_{x \to \infty} f(x) = A$
                     </li>
                     <li>
                         函数极限的性质<br>
@@ -277,8 +272,65 @@
                     </li>
                     <li>
                         两个重要极限<br>
-                        $\displaystyle \lim _{x \to 0} \dfrac{\sin x}x = 1$，$\displaystyle \lim _{x \to \infty} \left( 1 + \dfrac 1x \right) ^x = \mathrm e$<br>
-                        其中 $x$ 均可替换为相应条件下的函数 $f(x)$
+                        <ul class="margin-ul">
+                            <li>$\displaystyle \lim _{x \to 0} \dfrac{\sin x}x = 1$，$\displaystyle \lim _{x \to a} \dfrac{\sin f(x)}{f(x)} = 1$（$\displaystyle \lim_{x \to a} f(x) = 0$）</li>
+                            <li>$\displaystyle \lim _{x \to \infty} \left( 1 + \dfrac 1x \right) ^x = \mathrm e$，$\displaystyle \lim _{x \to a} \left( 1 + \dfrac 1{f(x)} \right) ^{f(x)} = \mathrm e$（$\displaystyle \lim_{x \to a} f(x) = \infty$）</li>
+                        </ul>
+                    </li>
+                    <li>
+                        极限存在准则<br>
+                        <ol class="margin-ul">
+                            <li>
+                                夹逼准则<br>
+                                $y_n \le x_n \le z_n$（$n &gt; N_0 \in \mathbf N _+$）且 $\displaystyle \lim_{n \to \infty} y_n = \lim_{n \to \infty} z_n = a \Leftrightarrow \lim_{n \to \infty} x_n = a$<br>
+                                $x \in \mathring U (x_0, \delta_1)$ 时 $g(x) \le f(x) \le h(x)$ 且 $\displaystyle \lim_{x \to x_0} g(x) = \lim_{x \to x_0} h(x) = A \Leftrightarrow \lim_{x \to x_0} f(x) = A$
+                            </li>
+                            <li>单调有界数列必收敛</li>
+                        </ol>
+                    </li>
+                    <li>
+                        设 $\alpha$、$\beta$ 是同一变化过程中的无穷小，若：
+                        <ol class="margin-ul">
+                            <li>$\lim \dfrac \beta \alpha = 0$，则称 $\beta$ 是比 $\alpha$ 高阶的无穷小，记作 $\beta = o(\alpha)$</li>
+                            <li>$\lim \dfrac \beta \alpha = \infty$，则称 $\beta$ 是比 $\alpha$ 低阶的无穷小</li>
+                            <li>$\lim \dfrac \beta \alpha = C \ne 0$，则称 $\beta$ 是 $\alpha$ 的同阶无穷小</li>
+                            <li>$\lim \dfrac \beta {\alpha ^k} = C \ne 0$，$k &gt; 0$，则称 $\beta$ 是关于 $\alpha$ 的 $k$ 阶无穷小</li>
+                            <li>$\lim \dfrac \beta \alpha = 1$，则称 $\beta$ 是 $\alpha$ 的等价无穷小，记作 $\alpha \sim \beta$ 或 $\beta \sim \alpha$</li>
+                        </ol>
+                    </li>
+                    <li>
+                        $\alpha \sim \beta \Leftrightarrow \beta = \alpha + o(\alpha)$<br>
+                        设 $\alpha \sim \tilde \alpha$，$\beta \sim \tilde \beta$，且 $\lim \dfrac{\tilde \beta}{\tilde \alpha}$ 存在，则 $\lim \dfrac \beta \alpha = \lim \dfrac{\tilde \beta}{\tilde \alpha}$
+                    </li>
+                    <li>
+                        常用的等价无穷小（当 $x \to 0$ 时）：
+                        <ol class="margin-ul">
+                            <li>$\sin x \sim \tan x \sim \arcsin x \sim \arctan x \sim x$</li>
+                            <li>$1 - \cos x \sim \dfrac 12 x^2$</li>
+                            <li>$\ln (1 + x) \sim \mathrm e ^x - 1 \sim x$</li>
+                            <li>$a ^x - 1 \sim x \ln a$（$a &gt; 0, a \ne 1$），$(1 + x) ^\alpha - 1 \sim \alpha x$（$\alpha \in \mathbf R, \alpha \ne 0$）</li>
+                        </ol>
+                    </li>
+                    <li>
+                        设 $y = f(x)$ 在 $U(x_0)$ 有定义，且满足：<br>
+                        <ol class="margin-ul">
+                            <li>$\displaystyle \lim_{\Delta x \to 0} \Delta y = \lim_{\Delta x \to 0} \left( f(x_0 + \Delta x) - f(x_0) \right) = 0$</li>
+                            <li>或 $\forall \varepsilon &gt; 0, \exist &gt; 0, |x - x_0| &lt; \delta$ 时有 $|f(x) - f(x_0)| &lt; \varepsilon$</li>
+                        </ol>
+                        则称 $f(x)$ 在点 $x_0$ 连续，且满足 $f(x_0^-) = f(x_0) = f(x_0^+)$
+                    </li>
+                    <li>
+                        函数的间断点<br>
+                        若 $f(x_0^-)$ 和 $f(x_0^+)$ 均存在，则 $x_0$ 为第一类间断点：
+                        <ol class="margin-ul">
+                            <li>若 $f(x_0^-) = f(x_0^+)$，则 $x_0$ 为可去间断点</li>
+                            <li>若 $f(x_0^-) \ne f(x_0^+)$，则 $x_0$ 为跳跃间断点</li>
+                        </ol>
+                        若 $f(x_0^-)$ 和 $f(x_0^+)$ 至少一个不存在，则 $x_0$ 为第二类间断点：
+                        <ol class="margin-ul">
+                            <li>若其中一个为 $\infty$，则 $x_0$ 为无穷间断点</li>
+                            <li>若其中一个为振荡，则 $x_0$ 为振荡间断点</li>
+                        </ol>
                     </li>
                 </ol>
             </div>

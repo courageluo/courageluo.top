@@ -131,7 +131,8 @@
                 <h3 style="text-align: center;">索引目录</h3>
                 <hr>
                 <ul id="target-index" style="column-count: 1;">
-                    <li><a href="#func-limit">函数与极限</a></li>
+                    <li><a href="#function-limits">函数与极限</a></li>
+                    <li><a href="#derivative-differential">导数与微分</a></li>
                 </ul>
             </div>
         </aside>
@@ -152,14 +153,15 @@
                 <h3 id="index" style="text-align: center;">索引目录</h3>
                 <hr>
                 <ul id="content-index" style="column-count: 2;">
-                    <li><a href="#func-limit">函数与极限</a></li>
+                    <li><a href="#function-limits">函数与极限</a></li>
+                    <li><a href="#derivative-differential">导数与微分</a></li>
                 </ul>
             </div>
 
             <!-- 内容框 -->
             <div class="rounded-box3">
                 <div class="container">
-                    <h3 id="func-limit" class="section-title">函数与极限</h3>
+                    <h3 id="function-limits" class="section-title">函数与极限</h3>
                     <a href="#index" id="text-right">返回索引</a>
                 </div>
                 <hr>
@@ -332,6 +334,55 @@
                             <li>若其中一个为振荡，则 $x_0$ 为振荡间断点</li>
                         </ol>
                     </li>
+                    <li>
+                        连续函数的运算
+                        <ol class="margin-ul">
+                            <li>若 $f(x)$ 和 $g(x)$ 在 $x_0$ 连续，则 $f(x) \pm g(x)$、$f(x)g(x)$、$\dfrac{f(x)}{g(x)}$（$g(x_0) \ne 0$）都在点 $x_0$ 连续</li>
+                            <li>若 $y = f(x)$ 在 $I_x$ 上单调递增（减）且连续，则反函数 $x = f^{-1} (y)$ 在 $I_y = \{ y | y = f(x), x \in I_x \}$ 上也单调递增（减）</li>
+                            <li>若 $y = f(g(x))$ 由 $y = f(u)$ 和 $u = f(x)$ 复合，且 $\mathring U (x_0) \subset D_{f \circ g}$，若 $\displaystyle \lim_{x \to x_0} g(x) = u_0$，而 $y = f(u)$ 在 $u = u_0$ 连续，则 $\displaystyle \lim_{x \to x_0} f(g(x)) = f\left(\lim_{x \to x_0} g(x)\right) = \lim_{u \to u_0} f(u) = f(u_0)$</li>
+                            <li>若 $y = f(g(x))$ 由 $y = f(u)$ 和 $u = f(x)$ 复合，且 $\mathring U (x_0) \subset D_{f \circ g}$，若 $u = g(x)$ 在 $x_0$ 连续，且 $g(x_0) = u_0$，而 $y = f(u)$ 在 $u = u_0$ 连续，则 $y = f(g(x))$ 在 $x_0$ 也连续</li>
+                        </ol>
+                    </li>
+                    <li>
+                        $\lim u(x) ^{v(x)} = \mathrm e ^{\lim v(x) \ln u(x)} = \lim u(x) ^{\lim v(x)}$
+                    </li>
+                    <li>
+                        有界性和最值定理<br>
+                        在闭区间上连续的函数在该区间上有界，且一定有最大值或最小值
+                    </li>
+                    <li>
+                        零点定理：设 $f(x) \in C[a,b]$，且 $f(a)f(b) &lt; 0$，则至少 $\exist \xi \in (a, b)$，使 $f(\xi) = 0$<br>
+                        介值定理：设 $f(x) \in C[a,b]$，且 $f(a) = A \ne f(b) = B$，则 $\forall C \in (A, B)$，至少 $\exist \xi \in (a, b)$，使 $f(\xi) = C$<br>
+                        推论：设 $f(x) \in C[a,b]$，则总 $\exist m, M$，使 $m \le f(x) \le M$
+                    </li>
+                </ol>
+            </div>
+            
+            <div class="rounded-box3">
+                <div class="container">
+                    <h3 id="derivative-differential" class="section-title">导数与微分</h3>
+                    <a href="#index" id="text-right">返回索引</a>
+                </div>
+                <hr>
+                <ol>
+                    <li>
+                        导数的定义<br>
+                        设 $y = f(x)$ 在 $x_0$ 的某邻域内有定义，若 $\displaystyle \lim_{x \to x_0} \dfrac{f(x) - f(x_0)}{x - x_0} = \lim_{\Delta x \to 0} \dfrac{\Delta y}{\Delta x}$ 存在，则称 $f(x)$ 在 $x_0$ 可导，称该极限为 $y = f(x)$ 在 $x_0$ 的导数，记作 $y' |_{x = x_0}, f'(x_0), \diffat yx{x = x_0}, \diffat{f(x)}x{x = x_0}$
+                    </li>
+                    <li>
+                        若 $\displaystyle \lim_{\Delta x \to 0} \dfrac{\Delta y}{\Delta x}$ 不存在，则称函数在 $x_0$ 不可导，若 $\displaystyle \lim_{\Delta x \to 0} \dfrac{\Delta y}{\Delta x} = \infty$，称函数在 $x_0$ 的导数为无穷大<br>
+                        若函数在 $I$ 内每点都可导，则称函数在 $I$ 内可导，构成的新函数称为导函数，记作 $y', f'(x), \diff yx, \diff{f(x)}x$
+                    </li>
+                    <li>
+                        同 1 点定义可定义左导数 $f'_-(x)$ 和右导数 $f'_+(x)$<br>
+                        $f'(x_0)$ 存在 $\Leftrightarrow f'_-(x_0) = f'_+(x_0)$
+                    </li>
+                    <li>
+                        $f'(x_0) \ne \infty$ 时，$f(x)$ 在 $(x_0, y_0)$ 的切线方程为 $y - y_0 = f'(x_0) (x - x_0)$，法线方程为 $y - y_0 = -\dfrac 1{f'(x_0)} (x - x_0)$（$f'(x_0) \ne 0$）
+                    </li>
+                    <li>
+                        可导一定连续，连续不一定可导
+                    </li>
                 </ol>
             </div>
         </main>
@@ -342,7 +393,7 @@
 
     <!-- 内部JS文件 -->
     <script src="/href/script.js" defer></script>
-    <!-- <script src="/blog/title/title.js" defer></script> -->
+    <script src="/blog/title/title.js" defer></script>
     <script src="/blog/quote-js/katex/katex.min.js"></script>
     <script src="/blog/quote-js/katex/contrib/copy-tex.min.js"></script>
     <script src="/blog/quote-js/katex/contrib/auto-render.min.js"></script>
@@ -364,7 +415,9 @@
                 ],
                 macros: {
                     '\\le': '\\leqslant',
-                    '\\ge': '\\geqslant'
+                    '\\ge': '\\geqslant',
+                    "\\diff": "\\dfrac{\\mathrm{d}#1}{\\mathrm{d}#2}",
+                    "\\diffat": "\\left.\\dfrac{\\mathrm{d}#1}{\\mathrm{d}#2}\\right|_{#3}"
                 }
             })
         });

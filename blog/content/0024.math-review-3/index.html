@@ -77,7 +77,7 @@
 
         @counter-style parentheses {
             system: fixed;
-            symbols: "(1)" "(2)" "(3)" "(4)" "(5)" "(6)" "(7)" "(8)" "(9)" "(10)";
+            symbols: "(1)" "(2)" "(3)" "(4)" "(5)" "(6)" "(7)" "(8)" "(9)" "(10)" "(11)" "(12)" "(13)" "(14)" "(15)" "(16)" "(17)" "(18)" "(19)" "(20)";
             suffix: " ";
         }
         
@@ -383,6 +383,76 @@
                     <li>
                         可导一定连续，连续不一定可导
                     </li>
+                    <li>
+                        四则运算求导法则<br>
+                        记 $u = u(x)$，$v = v(x)$ 在 $x$ 具有导数，则：
+                        <ol class="margin-ul">
+                            <li>$(u \pm v)' = u' \pm v'$</li>
+                            <li>
+                                $(uv)' = u'v + uv'$<br>
+                                推论：$(Cu)' = Cu'$，$(uvw)' = u'vw + uv'w + uvw'$
+                            </li>
+                            <li>$\left( \dfrac uv \right)' = \dfrac{u'v - uv'}{v^2}$</li>
+                        </ol>
+                    </li>
+                    <li>
+                        反函数求导法则<br>
+                        若 $y = f(x)$ 的反函数 $x = f^{-1} (y)$ 在 $y$ 的某邻域内单调可导，且 $(f^{-1} (y))' \ne 0$，则 $f'(x) = \dfrac{1}{(f^{-1} (y))'}$，即 $\diff yx = \dfrac{1}{\diff xy}$
+                    </li>
+                    <li>
+                        复合函数求导法则<br>
+                        记 $u = g(x)$ 在 $x$ 可导，$y = f(u)$ 在 $u = g(x)$ 可导，则 $y = f(g(x))$ 在 $x$ 可导，且 $\diff yx = f'(u)g'(x) = \diff yu \diff ux$
+                    </li>
+                    <li>
+                        基本初等函数的导数<br>
+                        <ol class="margin-ul">
+                            <li>$(C)' = 0$</li>
+                            <li>$(x ^\mu)' = \mu x ^{\mu - 1}$</li>
+                            <li>$(\sin x)' = \cos x$</li>
+                            <li>$(\cos x)' = -\sin x$</li>
+                            <li>$(\tan x)' = \sec ^2 x$</li>
+                            <li>$(\cot x)' = -\csc ^2 x$</li>
+                            <li>$(\sec x)' = \sec x \tan x$</li>
+                            <li>$(\csc x)' = -\csc x \cot x$</li>
+                            <li>$(a ^x)' = a ^x \ln a$</li>
+                            <li>$(\mathrm e ^x)' = \mathrm e ^x$</li>
+                            <li>$(\log _a x)' = \dfrac 1 {x \ln a}$</li>
+                            <li>$(\ln x)' = \dfrac 1 x$</li>
+                            <li>$(\arcsin x)' = \dfrac 1 {\sqrt{1 - x^2}}$</li>
+                            <li>$(\arccos x)' = -\dfrac 1 {\sqrt{1 - x^2}}$</li>
+                            <li>$(\arctan x)' = \dfrac 1 {1 + x^2}$</li>
+                            <li>$(\operatorname{arccot} x)' = -\dfrac 1 {1 + x^2}$</li>
+                        </ol>
+                    </li>
+                    <li>
+                        高阶导数<br>
+                        若 $y = f(x)$ 的导数 $y' = f'(x)$ 可导，则 $f'(x)$ 的导数称为二阶导数，记作 $y'' = (y')'$ 或 $\dfrac{\mathrm d^2 y}{\mathrm dx ^2} = \diff{}x \left( \diff yx \right)$<br>
+                        同理有 $n$ 阶导数 $y^{(n)} = \dfrac{\mathrm d^n y}{\mathrm dx ^n} = \displaystyle \lim _{\Delta x \to 0} \dfrac{f ^{(n - 1)} (x + \Delta x) - f ^{(n - 1)} (x)}{\Delta x}$
+                    </li>
+                    <li>
+                        高阶导数运算法则<br>
+                        记 $u = u(x)$，$v = v(x)$ 都具有 $n$ 阶导数，则：
+                        <ol class="margin-ul">
+                            <li>$(u \pm v)^{(n)} = u^{(n)} \pm v^{(n)}$</li>
+                            <li>$(Cu) ^{(n)} = Cu ^{(n)}$</li>
+                            <li>Leibniz 公式：$(uv) ^{(n)} = \displaystyle \sum _{k = 0} ^n \mathrm C _n^k u^{(n - k)} v^{(k)}$</li>
+                        </ol>
+                    </li>
+                    <li>
+                        若方程 $F(x, y) = 0$ 确定 $y$ 是 $x$ 的函数，则 $\diff{}x F(x, y) = 0$ 记为隐函数的导数，是含有 $y'$ 的方程，例如 $\diff{}x \ln y = \dfrac 1y \diff yx$
+                    </li>
+                    <li>
+                        若 $\bigg\{\begin{aligned}
+                                    x&=\varphi (t)\\
+                                    y&=\mathit\Psi (t)
+                                   \end{aligned}$ 确定一个 $y$ 与 $x$ 的函数关系，$\varphi (t)$、$\mathit\Psi (t)$ 可导且导数不全为零，则：
+                        <ol class="margin-ul">
+                            <li>$\varphi ' (t) \ne 0$ 时，$\diff yx = \diff yt \diff tx = \diff yt \dfrac{1}{\diff xt} = \dfrac{\mathit\Psi ' (t)}{\varphi ' (t)}$</li>
+                            <li>$\mathit\Psi ' (t) \ne 0$ 时，$\diff xy = \diff xt \diff ty = \diff xt \dfrac{1}{\diff yt} = \dfrac{\varphi ' (t)}{\mathit\Psi ' (t)}$</li>
+                            <li>二阶导 $\dfrac{\mathrm d^2 y}{\mathrm dx ^2} = \diff{}x \left( \diff yx \right) = \diff{}t \left( \diff yx \right) \diff tx = \diff{}t \left( \diff yx \right) \dfrac 1{\diff xt}$</li>
+                        </ol>
+                    </li>
+                    <li>若 $x = x(t)$、$y = y(t)$ 是可导函数且 $x$ 和 $y$ 有联系，则 $\diff xt$ 和 $\diff yt$ 也有联系，称为相关变化率</li>
                 </ol>
             </div>
         </main>

@@ -130,10 +130,7 @@
             <div class="rounded-box3">
                 <h3 style="text-align: center;">索引目录</h3>
                 <hr>
-                <ul id="target-index" style="column-count: 1;">
-                    <li><a href="#function-limits">函数与极限</a></li>
-                    <li><a href="#derivative-differential">导数与微分</a></li>
-                </ul>
+                <ul id="target-index" style="column-count: 1;"></ul>
             </div>
         </aside>
 
@@ -155,6 +152,7 @@
                 <ul id="content-index" style="column-count: 2;">
                     <li><a href="#function-limits">函数与极限</a></li>
                     <li><a href="#derivative-differential">导数与微分</a></li>
+                    <li><a href="#deri-diff-application">微分中值定理与导数的应用</a></li>
                 </ul>
             </div>
 
@@ -465,6 +463,79 @@
                     </li>
                 </ol>
             </div>
+
+            <div class="rounded-box3">
+                <div class="container">
+                    <h3 id="deri-diff-application" class="section-title">微分中值定理与导数的应用</h3>
+                    <a href="#index" id="text-right">返回索引</a>
+                </div>
+                <hr>
+                <ol>
+                    <li>
+                        Rolle 定理<br>
+                        <ol class="margin-ul">
+                            <li>Fermat 引理：若 $y = f(x)$ 在 $U(x_0)$ 有定义，且 $f(x) \le f(x_0)$ 或 $f(x) \ge x_0$，$f'(x_0)$ 存在，则 $f'(x_0) = 0$</li>
+                            <li>Rolle 定理：若 $f(x)$ 在 $[a,b]$ 上连续，$(a,b)$ 内可导，且 $f(a) = f(b)$，则至少 $\exist \xi \in (a,b)$，使 $f'(\xi) = 0$</li>
+                        </ol>
+                    </li>
+                    <li>
+                        Lagrange 中值定理<br>
+                        若 $f(x)$ 在 $[a,b]$ 上连续，$(a,b)$ 内可导，则至少 $\exist \xi \in (a,b)$，使 $f'(\xi) = \dfrac{f(b) - f(a)}{b - a}$
+                    </li>
+                    <li>
+                        Cauchy 中值定理<br>
+                        若 $f(x)$ 和 $F(x)$ 在 $[a,b]$ 上连续，$(a,b)$ 内可导，且 $(a,b)$ 内 $F'(x) \ne 0$，则至少 $\exist \xi \in (a,b)$，使 $\dfrac{f(b) - f(a)}{F(b) - F(a)} = \dfrac{f'(\xi)}{F'(\xi)}$
+                    </li>
+                    <li>
+                        L'Hôpital（L'Hospital）法则<br>
+                        若 $\displaystyle \lim_{x \to a} f(x) = \lim_{x \to a} F(a) = 0$ 或 $\infty$，$f(x)$、$F(x) \ne 0$ 在 $\mathring U(a)$ 内可导，且 $\displaystyle \lim_{x \to a} \dfrac{f'(x)}{F'(x)}$ 存在或为 $\infty$，则 $\displaystyle \lim_{x \to a} \dfrac{f(x)}{F(x)} = \lim_{x \to a} \dfrac{f'(x)}{F'(x)}$
+                    </li>
+                    <li>
+                        Taylor 中值定理<br>
+                        若 $f(x)$ 在包含 $x_0$ 的开区间 $(a, b)$ 内具有 $n + 1$ 阶导数，则 $x \in (a, b)$ 时，有 $f(x) = f(x_0) + f'(x_0)(x - x_0) + \dfrac{f''(x_0)}{2!} (x - x_0) ^2 + \cdots + \dfrac{f^{(n)} (x_0)}{n!} (x - x_0) ^n + R_n (x)$，该公式称为 $f(x)$ 的 $n$ 阶 Taylor 公式<br>
+                        其中 $R_n (x) = \dfrac{f^{(n + 1)} (\xi)}{(n + 1)!} (x - x_0) ^{n + 1}$（$\xi$ 在 $x_0$ 和 $x$ 之间）称为 $n$ 阶 Taylor 公式的 Lagrange 余项<br>
+                        注意到 $R_n (x) = o((x - x_0) ^n)$，称为 $n$ 阶 Taylor 公式的 Peano 余项
+                    </li>
+                    <li>
+                        取 Taylor 公式的 $x_0 = 0, \xi = \theta x (0 &lt; \theta &lt; 1)$，则有 $f(x) = f(0) + f'(0) x + \dfrac{f''(0)}{2!} x^2 + \cdots + \dfrac{f^{(n)} (0)}{n!} x^n + R_n (x)$，该公式称为 $f(x)$ 的 $n$ 阶 Maclaurin 公式<br>
+                        同理 $R_n (x) = \dfrac{f^{(n + 1)} (\theta x)}{(n + 1)!} x^{n + 1}$ 称为 $n$ 阶 Maclaurin 公式的 Lagrange 余项，$R_n (x) = o(x^n)$ 称为 $n$ 阶 Maclaurin 公式的 Peano 余项
+                    </li>
+                    <li>
+                        若 $f(x) \in C[a, b]$ 在 $(a, b)$ 内可导，且在 $(a, b)$ 内 $f'(x) \ge 0$（$f'(x) \le 0$），且等号在有限多个点成立，则 $f(x)$ 在 $[a, b]$ 上单调增加（单调减少）
+                    </li>
+                    <li>
+                        设 $f(x)$ 在 $I$ 上连续，$\forall x_1, x_2 \in I$，若 $f\left( \dfrac{x_1 + x_2} 2 \right) &lt; \dfrac{f(x_1) + f(x_2)} 2$（$f\left( \dfrac{x_1 + x_2} 2 \right) &gt; \dfrac{f(x_1) + f(x_2)} 2$），则称 $f(x)$ 在 $I$ 是向上凸（凹）的，凹凸的分界点称为拐点<br>
+                        设 $f(x)$ 在 $I$ 上有二阶导数，若 $I$ 内 $f''(x) &gt; 0$（$f''(x) &lt; 0$），则 $f(x)$ 在 $I$ 内是凹（凸）的
+                    </li>
+                    <li>
+                        函数极值求法<br>
+                        必要条件：设 $f(x)$ 在 $x_0$ 具有导数，且在 $x_0$ 取得极值，则 $f'(x_0) = 0$<br>
+                        <ol class="margin-ul">
+                            <li>第一充分条件：设 $f(x)$ 在 $x_0$ 连续，且在 $\mathring U(x_0, \delta)$ 内可导，若 $f'(x)$ 由正转负（由负转正），则 $f(x)$ 在 $x_0$ 取极大（小）值，若符号不变则无极值</li>
+                            <li>第二充分条件：设 $f(x)$ 在 $x_0$ 具有二阶导数，且 $f'(x_0) = 0$，$f''(x_0) \ne 0$，若 $f''(x_0) &lt; 0$（$f''(x_0) &gt; 0$），则 $f(x)$ 在 $x_0$ 取极大（小）值</li>
+                        </ol>
+                    </li>
+                    <li>
+                        渐近线<br>
+                        <ol class="margin-ul">
+                            <li>若 $\displaystyle \lim_{x \to \infty} f(x) = b$，则 $f(x)$ 有水平渐近线 $y = b$</li>
+                            <li>若 $\displaystyle \lim_{x \to x_0} f(x) = \infty$，则 $f(x)$ 有垂直（铅直）渐近线 $x = x_0$</li>
+                            <li>若 $\displaystyle \lim_{x \to \infty} (f(x) - (kx + b)) = 0$，则 $f(x)$ 有斜渐近线 $y = kx + b$，其中 $k = \displaystyle \lim_{x \to \infty} \dfrac{f(x)} x$，$b = \displaystyle \lim_{x \to \infty} (f(x) - kx)$</li>
+                        </ol>
+                    </li>
+                    <li>
+                        弧微分 $\mathrm ds = \sqrt{1 + y'^2} \: \mathrm dx = \sqrt{(\mathrm dx) ^2 + (\mathrm dy) ^2}$
+                    </li>
+                    <li>
+                        曲率 $K = \left| \diff \alpha s \right| \xlongequal{\tan\alpha \:=\: y'} \dfrac{|y''|}{(1 + y'^2) ^{\frac 32}}$<br>
+                        若曲线由 $\bigg\{\begin{aligned}
+                                          x&=x(t)\\
+                                          y&=y(t)
+                                         \end{aligned}$ 给出，则 $K = \dfrac{|x'y'' - x''y'|}{(x'^2 + y'^2) ^{\frac 32}}$<br>
+                        曲率半径 $\rho = \dfrac 1K$
+                    </li>
+                </ol>
+             </div>
         </main>
     </div>
 
